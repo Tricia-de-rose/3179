@@ -17,7 +17,7 @@
       "mark": { "type": "geoshape", "fill": "#f5f5f5", "stroke": "#ccc" } 
     }, 
     { 
-      "data": { "url": "https://raw.githubusercontent.com/Tricia-de-rose/3179/refs/heads/main/data/fire_archive_M6_96619.csv" }, 
+      "data": { "url": "data/fire_archive_M6_96619.csv" }, 
       "mark": { "type": "circle", "opacity": 0.6, "size": 25 }, 
       "encoding": { 
         "longitude": { "field": "longitude", "type": "quantitative" }, 
@@ -37,8 +37,5 @@
           { "field": "brightness", "type": "quantitative", "title": "Brightness" } 
         ] 
       } 
-    } 
-  ] 
-}
 
 

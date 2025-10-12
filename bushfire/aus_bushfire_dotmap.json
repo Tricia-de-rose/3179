@@ -19,15 +19,13 @@
 
   "params": [
     {
-      "name": "confidence_min",
-      "value": 0,
-      "bind": {
-        "input": "range",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "name": "Minimum Confidence (%): "
-      }
+  "name": "confidence_min",
+  "value": 30,
+  "bind": {
+    "input": "select",
+    "options": [0, 30, 50, 70, 90, 100],
+    "name": "Minimum Confidence (%): "
+  }
     },
     {
       "name": "brightness_min",
@@ -82,6 +80,7 @@
     }
   ]
 }
+
 
 
 

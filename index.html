@@ -4,38 +4,89 @@
   <meta charset="UTF-8">
   <title>Australian Bushfires</title>
 
-  <!-- Vega libraries -->
+  <!-- Important Vega libraries -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
-  <!-- CSS -->
+  <!-- All CSS files (style,pure) -->
   <link rel="stylesheet" href="bushfire/style.css">
+  <link rel="stylesheet" href="bushfire/pure.css" />
 </head>
+
 <body>
   <header>
     <h1>Australian Bushfires</h1>
   </header>
 
   <main>
-    <section class="chart-container">
-      <h3>Dot Map of Fire Hotspots (2016–2021)</h3>
-      <p class="subtitle">
-        Each circle represents a NASA VIIRS hotspot. Colours indicate brightness intensity.
-      </p>
-      <!-- Vega-Embed placeholder -->
-      <div id="map"></div>
+    <!-- Row 1: Climate Pressure and Root Causes -->
+    <section class="chart-row">
+      <div class="row-heading">
+        <h2>Climate Pressure and Root Causes</h2>
+      </div>
+
+      <div class="pure-g">
+        <!-- Chart 1 - Australia Has Been Getting Warmer (1950–2022)-->
+        <div class="pure-u-md-1-2 chart-box">
+          <h3>Australia Has Been Getting Warmer (1950–2022)</h3>
+          <p class="subtitle">
+            Annual mean temperature relative to the 1961–1990 average. Rising temperatures increase the likelihood and intensity of bushfires across the continent.
+          </p>
+          <div id="tempanomaly"></div>
+        </div>
+
+        <!-- Chart 2 - Greenhouse Gas Emissions by State (2023)-->
+        <div class="pure-u-md-1-2 chart-box">
+          <h3>Greenhouse Gas Emissions by State (2023)</h3>
+          <p class="subtitle">
+            Emissions across Australian states by sector (Mt CO₂-e). Energy and land use are the main contributors driving climatic warming and bushfire risk.
+          </p>
+          <div id="emissionsbarchart"></div>
+        </div>
+      </div>
     </section>
-  </main>
+
+    <!-- Row 2: Fire Hotspots Across Australia (2016–2021) -->
+   <section id="fire-distribution">
+  <div class="row-heading">
+    <h2>Fire Hotspots Across Australia (2016–2021)</h2>
+    <p>Each point represents a NASA VIIRS hotspot — filtered by brightness and confidence.</p>
+  </div>
+
+  <div class="chart-box">
+    <div id="map"></div>
+  
+  <p class="chart-description">
+The dot map titled “Fire Hotspots Across Australia (2016–2021)” visualizes thermal anomaly detections from NASA’s VIIRS satellite system. Each dot represents a hotspot, an area of unusually high surface heat, and is color coded by brightness as shown in the legend. Users can adjust the minimum confidence and minimum brightness sliders to filter out weaker or uncertain detections, while tooltips display details such as date, time, confidence level, and fire radiative power.
+Brighter dots indicate stronger fire activity, allowing users to distinguish between low intensity and high intensity events. Increasing the confidence threshold helps remove false positives caused by reflections or background heat. The map highlights clear spatial patterns of fire activity, with concentrations along the eastern seaboard, southeastern forests, and parts of Western Australia. These regions have faced recurring bushfires, including the 2019–2020 Black Summer season, one of the most destructive in Australian history. Overall, the map provides a clear visual summary of where fires occur, their intensity, and detection reliability, supporting broader analysis of climate, vegetation, and environmental impacts.
+  </p>
+  </div>
+</section>
+
+<!-- Row 3: Impact on animals due to bushfires -->
+<section class="chart-section">
+  <div class="row-heading">
+    <h2>Animal Impact – Donut Chart</h2>
+    <p>Distribution of animal species affected by bushfires in Australia</p>
+  </div>
+
+  <div id="donut" class="chart-container"></div>
+</section>
 
   <footer>
     <p>FIT3179 – Data Visualisation | Week 9 Homework</p>
+    <p> Author: Tricia de rose</p>
+    <p>source:  https://www.kaggle.com/datasets/nagarajbhat/australian-bush-fire-satellite-data-nasa?select=fire_archive_M6_101673.csv</p>
+    <p>source: https://www.climatechangeinaustralia.gov.au/en/obtain-data/download-datasets/?utm_source </p>
+    <p>source: https://www.agriculture.gov.au/abares/forestsaustralia/forest-data-maps-and-tools/spatial-data/forest-fire</p>
   </footer>
 
-  <!-- Load your embedding script -->
+  <!-- Vega-Lite Script -->
   <script src="bushfire/vega_lite_vis.js"></script>
 </body>
 </html>
+
 
 
 

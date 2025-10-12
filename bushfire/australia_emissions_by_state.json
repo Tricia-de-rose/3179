@@ -4,7 +4,8 @@
    "height": "container",
   "title": {
     "text": "Breakdown of Greenhouse Gas Emissions by State and Sector (2023)",
-    "subtitle": "Hover for details or filter by sector (Mt COâ‚‚-e)",
+    "subtitle": "Hover for details or filter by sector (Mt CO₂-e)",
+    "fontSize": 16,
     "anchor": "start"
   },
   "data": {
@@ -100,7 +101,7 @@
         "field": "Emissions_Mt",
         "type": "quantitative",
         "format": ".2f",
-        "title": "Emissions (Mt COâ‚‚-e)"
+        "title": "Emissions (Mt CO₂-e)"
       }
     ],
     "opacity": {
@@ -114,5 +115,7 @@
     "legend": { "titleFontSize": 12, "labelFontSize": 11 }
   }
 }
+
+
 
 

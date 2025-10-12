@@ -3,13 +3,6 @@
   "width": 900,
   "height": 500,
   "autosize": { "type": "fit", "resize": true },
-  "title": {
-    "text": "Fire Hotspots Across Australia (2016–2021)",
-    "subtitle": "Each point represents a NASA VIIRS hotspot — filtered by brightness and confidence.",
-    "anchor": "start",
-    "fontSize": 16,
-    "subtitleFontSize": 12
-  },
 
   "projection": {
     "type": "mercator",
@@ -19,13 +12,13 @@
 
   "params": [
     {
-  "name": "confidence_min",
-  "value": 30,
-  "bind": {
-    "input": "select",
-    "options": [0, 30, 50, 70, 90, 100],
-    "name": "Minimum Confidence (%): "
-  }
+      "name": "confidence_min",
+      "value": 30,
+      "bind": {
+        "input": "select",
+        "options": [0, 30, 50, 70, 90, 100],
+        "name": "Minimum Confidence (%): "
+      }
     },
     {
       "name": "brightness_min",
@@ -66,7 +59,7 @@
           "scale": {
             "range": ["#ffffb2", "#fecc5c", "#fd8d3c", "#e31a1c", "#800026"]
           },
-          "legend":  {  "format"  :  ".1s"  } 
+          "legend": { "format": ".1s" }
         },
         "tooltip": [
           { "field": "acq_date", "type": "temporal", "title": "Date" },
@@ -80,6 +73,7 @@
     }
   ]
 }
+
 
 
 

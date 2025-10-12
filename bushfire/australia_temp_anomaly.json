@@ -1,0 +1,87 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "autosize": {"type": "fit", "contains": "padding"},
+  "width": "container",
+  "height": "container",
+
+  "title": {
+    "text": "Australia Has Been Getting Warmer",
+    "subtitle": "Annual mean temperature above or below 1961–2022 average (°C)",
+    "fontSize": 16,
+    "anchor": "start"
+  },
+
+  "data": {
+    "url": "bushfire/data/australia_climate_trends_1950_2022.csv"
+  },
+
+  "transform": [
+    {
+      "aggregate": [
+        {"op": "mean", "field": "Average_Temperature", "as": "Mean_Temperature"}
+      ],
+      "groupby": ["Year"]
+    },
+    {
+      "joinaggregate": [
+        {"op": "mean", "field": "Mean_Temperature", "as": "Baseline"}
+      ]
+    },
+    {
+      "calculate": "datum.Mean_Temperature - datum.Baseline",
+      "as": "Temp_Anomaly"
+    },
+    {
+      "calculate": "datum.Temp_Anomaly >= 0 ? 'Above average' : 'Below average'",
+      "as": "Category"
+    }
+  ],
+
+  "layer": [
+    {
+      "mark": {"type": "bar"},
+      "encoding": {
+        "x": {"field": "Year", "type": "ordinal", "title": "Year"},
+        "y": {
+          "field": "Temp_Anomaly",
+          "type": "quantitative",
+          "title": "Temperature Anomaly (°C)",
+          "scale": {"domain": [-1.5, 1.5]}
+        },
+        "color": {
+          "field": "Category",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Below average", "Above average"],
+            "range": ["#377eb8", "#e41a1c"]
+          },
+          "legend": {"title": null}
+        },
+        "tooltip": [
+          {"field": "Year", "type": "ordinal"},
+          {
+            "field": "Mean_Temperature",
+            "type": "quantitative",
+            "title": "Mean Temp (°C)",
+            "format": ".2f"
+          },
+          {
+            "field": "Temp_Anomaly",
+            "type": "quantitative",
+            "title": "Anomaly (°C)",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {"type": "rule", "color": "black"},
+      "encoding": {"y": {"datum": 0}}
+    }
+  ],
+
+  "config": {
+    "view": {"stroke": "transparent"},
+    "axis": {"labelFontSize": 11, "titleFontSize": 12}
+  }
+}

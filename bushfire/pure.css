@@ -1,0 +1,65 @@
+/* ----- Layout Grid Foundation ----- */
+.pure-g {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start; /* ✅ ensures top alignment (prevents blue overlap) */
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  overflow: visible;
+}
+
+/* ----- Two-column layout ----- */
+.pure-u-md-1-2 {
+  flex: 1 1 48%;
+  min-width: 0;
+}
+
+/* ----- Chart Row Container ----- */
+.chart-row {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* ----- Chart Boxes ----- */
+.chart-box {
+  display: block; /* ✅ fixes height collapse */
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  box-sizing: border-box;
+  min-height: 500px;
+  overflow: visible;
+  margin-bottom: 40px;
+}
+
+/* Fire Distribution Section */
+#fire-distribution {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#fire-distribution .chart-box {
+  min-height: 500px;
+  overflow: visible;
+  margin-bottom: 40px;
+}
+
+/* Responsive Fixes */
+@media (max-width: 900px) {
+  .pure-u-md-1-2 {
+    flex: 1 1 100%;
+  }
+
+  .chart-box {
+    min-height: 380px;
+  }
+}

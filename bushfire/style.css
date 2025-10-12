@@ -1,65 +1,216 @@
+/* ===================================
+   General Appearance
+=================================== */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   background-color: #f8f9fa;
   margin: 0;
-  padding: 0;
   color: #333;
   line-height: 1.5;
 }
 
+/* ===================================
+   Header
+=================================== */
 header {
   text-align: center;
-  padding: 20px;
-  background: #004d66;
+  padding: 30px 20px;
+  background: #0a2540;
   color: white;
 }
 
 header h1 {
   font-size: 32px;
   margin: 0;
+  font-weight: 700;
 }
 
 header h2 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
-  margin: 5px 0;
+  color: #bbdefb;
+  margin-top: 5px;
 }
 
-header .subtitle {
+/* ===================================
+   Section Headings (Blue Bars)
+=================================== */
+.row-heading {
+  width: 100%;
+  text-align: center;
+  background-color: #1d609c;
+  color: white;
+  padding: 20px 10px;
+  margin: 60px auto 30px auto;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.row-heading h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+}
+
+.row-heading p {
   font-size: 14px;
-  color: #d9edf7;
+  color: #e3f2fd;
+  margin: 0 auto;
+  max-width: 850px;
+  line-height: 1.4;
 }
 
-main {
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 0 15px;
+/* ===================================
+   Chart Layout Rows
+=================================== */
+.chart-row {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 50px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.pure-g {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.pure-u-md-1-2 {
+  flex: 1 1 48%;
+  min-width: 0;
+}
+
+/* ===================================
+   Chart Boxes
+=================================== */
+.chart-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  min-height: auto; /* ✅ Let it auto-expand with content */
+  margin-bottom: 30px;
+}
+
+/* For the Vega map inside */
+.chart-box .vega-embed,
+.chart-box .vega-embed > div,
+.chart-box svg {
+  width: 100% !important;
+  height: auto !important; /* ✅ prevents cropping */
+  min-height: 500px !important; /* ✅ taller for your map */
+}
+
+/* Description fits inside the same container */
+.chart-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+  margin-top: 25px;
+  text-align: justify;
+}
+
+/* ===================================
+   Vega Charts Inside Boxes
+=================================== */
+.chart-box .vega-embed,
+.chart-box .vega-embed > div,
+.chart-box svg {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 420px !important;
+}
+
+/* Hide the 3-dot Vega menu */
+.vega-embed summary {
+  display: none !important;
+}
+
+/* ===================================
+   Fire Distribution & Donut Sections
+=================================== */
+#fire-distribution,
+.chart-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#fire-distribution .chart-box {
+  min-height: 520px;
 }
 
 .chart-container {
-  background: white;
+  width: 100%;
+  min-height: 460px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   padding: 20px;
-  margin-bottom: 30px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-.chart-container h3 {
-  text-align: left;
-  margin-top: 0;
-  color: #004d66;
+/* Donut chart specific */
+#donut {
+  height: 460px !important;
 }
 
-#map {
-  margin: auto;
-  width: 95%;
-}
-
+/* ===================================
+   Footer
+=================================== */
 footer {
   text-align: center;
-  padding: 15px;
-  background: #eee;
+  padding: 20px;
+  background: #e0e7ef;
   font-size: 14px;
-  margin-top: 30px;
+  color: #444;
+  margin-top: 60px;
 }
+
+/* ===================================
+   Responsive
+=================================== */
+@media (max-width: 900px) {
+  .pure-u-md-1-2 {
+    flex: 1 1 100%;
+  }
+
+  .chart-box,
+  #fire-distribution .chart-box,
+  .chart-container {
+    min-height: 400px;
+  }
+
+  .row-heading {
+    margin: 40px auto 20px auto;
+  }
+}
+
+.chart-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+  max-width: 1000px;
+  margin: 20px auto 40px auto;
+  padding: 0 20px;
+  text-align: justify;
+}
+
+
+
+

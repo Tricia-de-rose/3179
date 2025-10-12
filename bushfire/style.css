@@ -1,6 +1,3 @@
-/* ===================================
-   General Appearance
-=================================== */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   background-color: #f8f9fa;
@@ -9,22 +6,18 @@ body {
   line-height: 1.5;
 }
 
-/* ===================================
-   Header
-=================================== */
+/* styling Header */
 header {
   text-align: center;
   padding: 30px 20px;
   background: #0a2540;
   color: white;
 }
-
 header h1 {
   font-size: 32px;
   margin: 0;
   font-weight: 700;
 }
-
 header h2 {
   font-size: 18px;
   font-weight: normal;
@@ -32,9 +25,7 @@ header h2 {
   margin-top: 5px;
 }
 
-/* ===================================
-   Section Headings (Blue Bars)
-=================================== */
+/* Sub Section Headings (Blue Bars)*/
 .row-heading {
   width: 100%;
   text-align: center;
@@ -45,13 +36,11 @@ header h2 {
   border-radius: 6px;
   box-sizing: border-box;
 }
-
 .row-heading h2 {
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 6px 0;
 }
-
 .row-heading p {
   font-size: 14px;
   color: #e3f2fd;
@@ -60,9 +49,7 @@ header h2 {
   line-height: 1.4;
 }
 
-/* ===================================
-   Chart Layout Rows
-=================================== */
+/* Chart Layout */
 .chart-row {
   width: 100%;
   max-width: 1200px;
@@ -70,7 +57,6 @@ header h2 {
   padding: 0 20px;
   box-sizing: border-box;
 }
-
 .pure-g {
   display: flex;
   flex-wrap: wrap;
@@ -78,15 +64,10 @@ header h2 {
   align-items: flex-start;
   gap: 20px;
 }
-
 .pure-u-md-1-2 {
   flex: 1 1 48%;
   min-width: 0;
 }
-
-/* ===================================
-   Chart Boxes
-=================================== */
 .chart-box {
   display: flex;
   flex-direction: column;
@@ -103,8 +84,6 @@ header h2 {
   min-height: auto; /* ✅ Let it auto-expand with content */
   margin-bottom: 30px;
 }
-
-/* For the Vega map inside */
 .chart-box .vega-embed,
 .chart-box .vega-embed > div,
 .chart-box svg {
@@ -112,8 +91,6 @@ header h2 {
   height: auto !important; /* ✅ prevents cropping */
   min-height: 500px !important; /* ✅ taller for your map */
 }
-
-/* Description fits inside the same container */
 .chart-description {
   font-size: 14px;
   line-height: 1.6;
@@ -121,10 +98,6 @@ header h2 {
   margin-top: 25px;
   text-align: justify;
 }
-
-/* ===================================
-   Vega Charts Inside Boxes
-=================================== */
 .chart-box .vega-embed,
 .chart-box .vega-embed > div,
 .chart-box svg {
@@ -132,15 +105,9 @@ header h2 {
   height: 100% !important;
   min-height: 420px !important;
 }
-
-/* Hide the 3-dot Vega menu */
 .vega-embed summary {
   display: none !important;
 }
-
-/* ===================================
-   Fire Distribution & Donut Sections
-=================================== */
 #fire-distribution,
 .chart-section {
   width: 100%;
@@ -149,7 +116,6 @@ header h2 {
   padding: 0 20px;
   box-sizing: border-box;
 }
-
 #fire-distribution .chart-box {
   min-height: 520px;
 }
@@ -165,14 +131,12 @@ header h2 {
   overflow: hidden;
 }
 
-/* Donut chart specific */
+/* Donut chart for animlals */
 #donut {
   height: 460px !important;
 }
 
-/* ===================================
-   Footer
-=================================== */
+/* Footer styling */
 footer {
   text-align: center;
   padding: 20px;
@@ -181,10 +145,6 @@ footer {
   color: #444;
   margin-top: 60px;
 }
-
-/* ===================================
-   Responsive
-=================================== */
 @media (max-width: 900px) {
   .pure-u-md-1-2 {
     flex: 1 1 100%;
@@ -200,7 +160,6 @@ footer {
     margin: 40px auto 20px auto;
   }
 }
-
 .chart-description {
   font-size: 14px;
   line-height: 1.6;
@@ -210,6 +169,11 @@ footer {
   padding: 0 20px;
   text-align: justify;
 }
+
+/* additional aid for styling */
+/*https://developer.mozilla.org/en-US/docs/Web/CSS*/
+/*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+
 
 
 

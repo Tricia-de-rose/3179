@@ -1,9 +1,9 @@
-/* ----- Layout Grid Foundation ----- */
+/* layout for the gird*/
 .pure-g {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start; /* ✅ ensures top alignment (prevents blue overlap) */
+  align-items: flex-start; 
   gap: 20px;
   width: 100%;
   box-sizing: border-box;
@@ -11,13 +11,13 @@
   overflow: visible;
 }
 
-/* ----- Two-column layout ----- */
+/* for the Two-column layout */
 .pure-u-md-1-2 {
   flex: 1 1 48%;
   min-width: 0;
 }
 
-/* ----- Chart Row Container ----- */
+/* this code is for the Row Container for the idioms */
 .chart-row {
   width: 100%;
   max-width: 1200px;
@@ -26,9 +26,9 @@
   box-sizing: border-box;
 }
 
-/* ----- Chart Boxes ----- */
+/* this is for the chart */
 .chart-box {
-  display: block; /* ✅ fixes height collapse */
+  display: block; 
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
@@ -38,7 +38,6 @@
   margin-bottom: 40px;
 }
 
-/* Fire Distribution Section */
 #fire-distribution {
   width: 100%;
   max-width: 1200px;
@@ -53,7 +52,7 @@
   margin-bottom: 40px;
 }
 
-/* Responsive Fixes */
+
 @media (max-width: 900px) {
   .pure-u-md-1-2 {
     flex: 1 1 100%;
@@ -63,3 +62,12 @@
     min-height: 380px;
   }
 }
+
+/* learnt pur.css from external websites listed below  */
+/*https://pure-css.github.io/grids/?utm_source */
+/*https://www.tutorialspoint.com/purecss/purecss_grids.htm?utm_source*/
+/*https://dev.to/logrocket/creating-responsive-mobile-layouts-with-purecss-11bk?utm_source*/
+/*https://www.w3schools.com/css/css3_mediaqueries.asp*/
+/*https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-standard-resolutions-and-more/*/
+
+

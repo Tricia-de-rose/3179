@@ -1,0 +1,60 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Forest Burn Frequency by Jurisdiction",
+    "fontSize": 18,
+    "fontWeight": "bold",
+    "anchor": "start"
+  },
+  "width": 750,
+  "height": 400,
+  "data": { "url": "bushfire/data/forest_burnt_times.csv" },
+
+  "transform": [
+    {
+      "fold": ["One_times", "Two_times", "Three_times", "Four_times", "Five_times"],
+      "as": ["Burn_Frequency", "Area_ha"]
+    },
+    {
+      "calculate": "replace(datum.Burn_Frequency, '_', ' ')",
+      "as": "Burn_Frequency_Label"
+    }
+  ],
+
+  "mark": "rect",
+
+  "encoding": {
+    "x": {
+      "field": "Burn_Frequency_Label",
+      "type": "nominal",
+      "title": "Number of Times Burnt",
+      "sort": ["One times", "Two times", "Three times", "Four times", "Five times"]
+    },
+    "y": {
+      "field": "Jurisdiction",
+      "type": "nominal",
+      "title": "State / Territory",
+      "sort": "-x"
+    },
+    "color": {
+      "field": "Area_ha",
+      "type": "quantitative",
+      "title": "Area Burnt ('000 ha)",
+      "scale": { "scheme": "orangered" }
+    },
+    "tooltip": [
+      { "field": "Jurisdiction", "title": "State" },
+      { "field": "Burn_Frequency_Label", "title": "Times Burnt" },
+      { "field": "Area_ha", "title": "Area ('000 ha)" }
+    ]
+  },
+
+  "config": {
+    "background": "#fafafa",
+    "axis": { "labelFontSize": 11, "titleFontSize": 12 },
+    "legend": { "titleFontSize": 12, "labelFontSize": 11 }
+  }
+}
+
+
+

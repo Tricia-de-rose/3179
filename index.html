@@ -1,94 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Australian Bushfires</title>
+  <meta charset="UTF-8" />
+  <title>The Root Forces Behind Australia’s Bushfires</title>
 
-  <!-- Important Vega libraries -->
+  <!-- Vega Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
-  <!-- All CSS files (style,pure) -->
-  <link rel="stylesheet" href="bushfire/style.css">
+  <!-- CSS -->
   <link rel="stylesheet" href="bushfire/pure.css" />
+  <link rel="stylesheet" href="bushfire/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="bushfire/style.css">
+
 </head>
 
 <body>
   <header>
-    <h1>Australian Bushfires</h1>
+    <h1>Australia Bushfire: From Ignition to Recovery</h1>
   </header>
 
   <main>
-    <!-- Row 1: Climate Pressure and Root Causes -->
+    <!-- ========== SECTION 1: ROOT FORCES BEHIND BUSHFIRES ========== -->
     <section class="chart-row">
       <div class="row-heading">
-        <h2>Climate Pressure and Root Causes</h2>
+        <h2>The Root Forces Behind Australia’s Bushfires</h2>
+        <p style="font-size:15px;">
+  Exploring how human activity, emissions, and climate change amplify ignition risks —
+  revealing the environmental and anthropogenic pressures that set the stage for Australia’s fires.
+       </p>
+
       </div>
 
+      <!-- ROW 1 -->
       <div class="pure-g">
-        <!-- Chart 1 - Australia Has Been Getting Warmer (1950–2022)-->
-        <div class="pure-u-md-1-2 chart-box">
-          <div id="tempanomaly"></div>
+        <!-- Chart 1: Main Causes of Bushfires -->
+        <div class="pure-u-md-1-2">
+          <div class="chart-box">
+            <div id="bushfirecauses"></div>
+            <p class="chart-caption">
+              Most bushfires in Australia stem from human activity rather than natural events. 
+              While lightning remains a key natural cause, deliberate ignitions, escaped agricultural burns, and recreational fires account for the majority of incidents. 
+              Up to two-thirds of Australian bushfires are human-related, often occurring near populated and farming areas. 
+              These findings emphasize how human behaviour amplifies natural fire risks, making prevention and awareness vital in reducing ignition sources. 
+              Data shows that lightning causes about 22% of fires and drought around 10%. 
+              In contrast, human factors such as deliberate acts, agricultural burns, campfires, cigarettes, and machinery account for over 60% of bushfire ignitions across Australia.
+            </p>
+          </div>
         </div>
 
-        <!-- Chart 2 - Greenhouse Gas Emissions by State (2023)-->
-        <div class="pure-u-md-1-2 chart-box">
-          <div id="emissionsbarchart"></div>
+        <!-- Chart 2: Rising CO2 Emissions -->
+        <div class="pure-u-md-1-2">
+          <div class="chart-box">
+            <div id="risingco2"></div>
+            <p class="chart-caption">
+              Australia’s per-capita CO₂ emissions climbed sharply from around 6.8 tonnes in 1950 to a peak of over 19 tonnes by the early 2000s, before gradually declining to 14.5 tonnes in 2023. 
+              This long-term accumulation of greenhouse gases, mainly from the burning of fossil fuels such as coal, oil, and natural gas, has contributed to Australia’s warming trend with hotter and drier conditions creating the ideal environment for bushfires. 
+              The close link between increasing emissions and temperature anomalies underscores how decades of industrial and energy-driven growth have intensified the nation’s bushfire risk through a steadily warming atmosphere. 
+              CO₂ emissions are measured in metric tonnes, representing the amount of carbon dioxide released per person each year.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW 2 -->
+      <div class="pure-g">
+        <!-- Chart 3: Greenhouse Gas Emissions by State and Sector -->
+        <div class="pure-u-md-1-2">
+          <div class="chart-box">
+            <div id="emissionsbarchart"></div>
+            <p class="chart-caption">
+              Greenhouse gas emissions across Australian states vary widely by source and economic activity.
+              In 2023, Queensland and New South Wales recorded the highest totals, largely driven by the
+              energy and industrial sectors. Agriculture and land use changes also remain significant emitters
+              in rural states, while smaller territories like the Australian Capital Territory contribute
+              minimally. Emissions are measured in million tonnes of CO₂ equivalent (Mt CO₂-e), highlighting
+              how energy-intensive industries continue to dominate Australia’s carbon footprint despite gradual
+              improvements in renewable adoption.
+            </p>
+          </div>
+        </div>
+
+        <!-- Chart 4: Rising Temperature Anomalies -->
+        <div class="pure-u-md-1-2">
+          <div class="chart-box">
+            <div id="risingtemperature"></div>
+            <p class="chart-caption">
+              The temperature anomaly values show how much warmer or cooler each month was compared to the 2000–2023 average. 
+              Positive values mean the month was hotter than usual, while negative values mean it was cooler. 
+              Red dots on the chart represent warmer months, and blue dots show cooler ones. You can use the “Select Year” filter to view temperature anomalies for a specific year or choose “All” to see the overall trend. 
+              Over time, the growing number of red dots highlights Australia’s clear warming trend since 2000. 
+              Years such as 2013, 2019, and 2024 recorded some of the hottest months on record. This ongoing rise in temperature has increased the frequency of heatwaves, droughts, and extreme fire weather, intensifying bushfire risks. 
+              The data reveals how climate change is reshaping Australia’s climate, making it hotter, drier, and more vulnerable to severe bushfires.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Row 2: Fire Hotspots Across Australia (2016–2021) -->
-   <section id="fire-distribution">
-  <div class="row-heading">
-    <h2>Fire Hotspots Across Australia (2016–2021)</h2>
-    <p>Each point represents a NASA VIIRS hotspot — filtered by brightness and confidence.</p>
-  </div>
-
-  <div class="chart-box">
-    <div id="map"></div>
   
-  <p class="chart-description">
-Each point represents a hotspot, with colour intensity indicating the level of surface heat. Users can adjust the Minimum Confidence (%) and Minimum Brightness controls to filter out weak or uncertain detections, refining the visualisation to highlight only significant fire events.
-The 2016 Tasmanian fires burned over 100,000 hectares, including parts of the Tasmanian Wilderness World Heritage Area, while subsequent years saw widespread fires driven by drought and high fuel loads. The 2019–2020 Black Summer fires were among the most destructive in recorded history, burning nearly 24 million hectares, destroying over 3,000 homes, and killing or displacing an estimated three billion animals. In the following years, bushfires continued at a smaller scale, including events in New South Wales, Western Australia, and Tasmania during the 2021–2022 season.
-  </div>
-</section>
-
-<!-- Row3 : Human & Environmental Impacts -->
+    <!-- ========== ROW 3: FIRE DISTRIBUTION AND FREQUENCY / SECTION 2  ========== -->
 <section class="chart-row">
   <div class="row-heading">
-    <h2>Forest Burn Frequency Across Australian States</h2>
-    <p>This heat map shows how often forests in each state and territory were burnt between 2016 and 2021, highlighting regions with repeated fire exposure.</p>
+    <h2>Geographic Distribution of Bushfire Risk and Occurrence</h2>
+    <p style="font-size:15px;">
+      These maps highlight how fire danger varies across Australian states and where bushfires occur most frequently,
+      combining climatic risk indicators with satellite hotspot observations.
+    </p>
   </div>
 
   <div class="pure-g">
-    <!-- Heat Map: Forest Burn Frequency -->
-    <div class="pure-u-1-2">
-      <div id="heatmap"></div>
+    <!-- Left chart: Choropleth (FFDI Map) -->
+    <div class="pure-u-md-1-2">
+      <div class="chart-box">
+        <div id="ffdi_map"></div>
+        <p class="chart-caption">
+          The Forest Fire Danger Index (FFDI), developed by Alan G. McArthur of the CSIRO in the 1960s, measures the potential severity of bushfire conditions based on temperature, humidity, wind speed, and drought levels. Higher FFDI values indicate more dangerous fire weather, reflecting increased ignition risk, faster spread, and greater difficulty in control. The index is divided into five key categories: High (12–25), Very High (25–50), Severe (50–75), Extreme (75–100), and Catastrophic (>100), each representing escalating levels of danger. Over the past few decades and into future projections, Northern Territory, Queensland, Victoria, and New South Wales have consistently recorded the highest FFDI levels, reflecting sustained exposure to intense heat and dry conditions. In contrast, Tasmania continues to record the lowest values due to its cooler, maritime climate and proximity to Antarctica. Overall, the data reveals a steady rise in fire danger across Australia, driven by increasing temperatures and prolonged drought.
+        </p>
+      </div>
     </div>
 
-<!-- Row 4 : Impact on animals due to bushfires -->
-<section class="chart-section">
-  <div class="row-heading">
-    <h2>Animal Impact – Donut Chart</h2>
-    <p>Distribution of animal species affected by bushfires in Australia</p>
+    <!-- Right chart: Dot Map (Hotspot Density) -->
+    <div class="pure-u-md-1-2">
+      <div class="chart-box">
+        <div id="map"></div>
+        <p class="chart-caption">
+          Each point represents a hotspot, with colour intensity indicating the level of surface heat. Users can adjust the Minimum Confidence (%) and Minimum Brightness controls to filter out weak or uncertain detections, refining the visualisation to highlight only significant fire events.
+The 2016 Tasmanian fires burned over 100,000 hectares, including parts of the Tasmanian Wilderness World Heritage Area, while subsequent years saw widespread fires driven by drought and high fuel loads. The 2019–2020 Black Summer fires were among the most destructive in recorded history, burning nearly 24 million hectares, destroying over 3,000 homes, and killing or displacing an estimated three billion animals. In the following years, bushfires continued at a smaller scale, including events in New South Wales, Western Australia, and Tasmania during the 2021–2022 season.
+        </p>
+      </div>
+    </div>
   </div>
 
-  <div id="donut" class="chart-container"></div>
 </section>
 
 
-  <footer>
-    <p>FIT3179 – Data Visualisation | Week 9 Homework</p>
-    <p> Author: Tricia de rose</p>
-    <p>source:  https://www.kaggle.com/datasets/nagarajbhat/australian-bush-fire-satellite-data-nasa?select=fire_archive_M6_101673.csv</p>
-    <p>source: https://www.climatechangeinaustralia.gov.au/en/obtain-data/download-datasets/?utm_source </p>
-    <p>source: https://www.agriculture.gov.au/abares/forestsaustralia/forest-data-maps-and-tools/spatial-data/forest-fire</p>
-  </footer>
+<!-- ========== ROW 4: DEADLIEST BUSHFIRES & TIMELINE / SECTION 3 ========== -->
+<section class="chart-row">
+  <div class="row-heading">
+    <h2>Deadliest Bushfires in Australia and Timeline of Major Events</h2>
+    <p style="font-size:15px;">
+      Explore how Australia’s deadliest bushfires compare by fatalities,
+      when they occurred across time, and the breakdown of their impacts
+      on people and property.
+    </p>
+  </div>
 
-  <!-- Vega-Lite Script -->
-  <script src="bushfire/vega_lite_vis.js"></script>
+  <div class="pure-g">
+    <div class="pure-u-md-1-2">
+      <div class="chart-box">
+        <div id="impact_breakdown"></div>
+        <p class="chart-caption">
+          Australia has experienced numerous devastating bushfires throughout its history, driven by its hot, dry climate and vast flammable landscapes. 
+          The graph highlights the largest bushfires by area burned, including the 1974–75 Bushfire Season, which scorched over 117 million hectares, around 15 percent of the continent. 
+          Other major events include the 1969–70 Dry River Victoria fire, 1968–69 Killarney Top Spring fire, and the 2002 Northern Territory bushfires, each consuming tens of millions of hectares. 
+          The 2019–20 Black Summer also stands out for its extensive national impact. 
+          These fires demonstrate Australia’s recurring exposure to extreme fire conditions across different regions and decades.
+          Together, these events reveal how climate variability, land management practices, and natural fuel accumulation continue to shape the scale and intensity of Australia’s bushfire seasons.
+        </p>
+      </div>
+    </div>
+
+    <div class="pure-u-md-1-2">
+      <div class="chart-box">
+        <div id="breakdown"></div>
+        <p class="chart-caption">
+        The chart highlights Australia’s five deadliest bushfires, each representing significant loss of life and widespread destruction. 
+        The 1926 bushfires marked one of the first large-scale tragedies in Victoria’s history. These deadly events underscore how extreme weather, strong winds, and prolonged droughts have repeatedly fueled catastrophic fire conditions across Australia’s landscape.
+      </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <!-- ========== ROW 5: Animal Impact & Burned Area ========== -->
+<section class="chart-row">
+  <div class="row-heading">
+    <h2>Environmental and Ecological Impacts of Australia’s Bushfires</h2>
+    <p style="font-size:15px;">
+     Examining how bushfires affect wildlife, vegetation, and air quality across Australia.
+    </p>
+  </div>
+
+  <div class="pure-g">
+    <!-- Left: Isotype Chart -->
+    <div class="pure-u-md-1-3">
+      <div class="chart-box">
+        <div id="bushfire_isotype"></div>
+        <p class="chart-caption">
+        These icons illustrate the proportion of different animal groups affected by major bushfires across Australia. 
+        Reptiles account for the largest share of wildlife losses, followed by birds, mammals, fish, and amphibians. 
+        The visualization highlights how bushfires disrupt entire ecosystems, impacting both land and aquatic species.
+      </p>
+      </div>
+    </div>
+
+    <!-- Middle: Multi-Area Chart -->
+    <div class="pure-u-md-1-3">
+      <div class="chart-box">
+        <div id="burnedArea"></div>
+        <p class="chart-caption">
+        Australia’s burned area varies widely across vegetation types, with shrublands and grasslands consistently experiencing the largest fires. 
+        Savannas and forests also show significant losses, especially during extreme fire years like 2011 and 2019. 
+        The data highlights how different land covers contribute to Australia’s overall fire-affected landscape.
+      </p>
+      </div>
+    </div>
+
+    <!-- Right: Dual-Axis Chart -->
+    <div class="pure-u-md-1-3">
+      <div class="chart-box">
+        <div id="dualaxis_chart"></div>
+        <p class="chart-caption">
+          PM2.5 refers to fine particulate matter smaller than 2.5 micrometres that can penetrate deep into the lungs and bloodstream. 
+          In Australia, wildfire-related PM2.5 emissions fluctuate yearly, peaking during severe fire seasons such as 2011–2012 and 2019–2020, reflecting intense burning and smoke pollution.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- row 6 -->
+<section class="chart-row">
+  <div class="row-heading">
+    <h2>Community Recovery and Government Response</h2>
+    <p style="font-size:15px;">
+      Bushfire recovery in Australia is a shared responsibility between communities, local governments,
+      state and territory governments, and the Australian Government. The table below summarises
+      how each level contributes to rebuilding and resilience after disasters.
+    </p>
+  </div>
+
+  <div class="pure-g">
+    <!-- Left: Image -->
+    <div class="pure-u-md-1-3" style="text-align:center;">
+      <img src="bushfire/data/recovery.jpg" alt="Recovery Framework" style="max-width:80%; border-radius:10px;">
+    </div>
+
+    <!-- Right: Table -->
+<div class="pure-u-md-1-3">
+  <table class="pure-table pure-table-bordered" 
+         style="width:100%; background:white; border-collapse:collapse; 
+                font-family:'Open Sans', Arial, sans-serif; font-size:13px; 
+                line-height:1.5; border:1px solid #0a2540;">
+    <thead>
+      <tr style="background:#0a2540; color:white; text-align:left;">
+        <th style="width:28%; border:1px solid #0a2540; padding:8px;">Level of Government</th>
+        <th style="width:72%; border:1px solid #0a2540; padding:8px;">Key Responsibilities</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border:1px solid #0a2540; padding:8px;"><b>Australian Government</b></td>
+        <td style="border:1px solid #0a2540; padding:8px;">
+          • Supports recovery through national funding and coordination.<br>
+          • Manages the National Bushfire Recovery Fund and Agency.<br>
+          • Provides disaster payments and oversees environmental recovery.
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #0a2540; padding:8px;"><b>State & Territory Governments</b></td>
+        <td style="border:1px solid #0a2540; padding:8px;">
+          • Lead recovery and coordinate local planning.<br>
+          • Deliver frameworks and housing support under DRFA.<br>
+          • Provide mental health and wildlife rehabilitation services.
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #0a2540; padding:8px;"><b>Local Governments</b></td>
+        <td style="border:1px solid #0a2540; padding:8px;">
+          • Identify local needs and lead recovery efforts.<br>
+          • Manage permits, debris removal, and infrastructure repair.<br>
+          • Support vulnerable residents and community engagement.
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #0a2540; padding:8px;"><b>Communities</b></td>
+        <td style="border:1px solid #0a2540; padding:8px;">
+          • Set recovery priorities and contribute to planning.<br>
+          • Participate in rebuilding and volunteering.<br>
+          • Strengthen resilience through leadership and collaboration.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+    <div class="pure-u-md-1-3" style="padding-left:10px;">
+      <div class="chart-box">
+        <div id="recovery_donut"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="donate" style="margin-top:40px;">
+  <h2 style="text-align:center; color:#0a2540; font-family:'Open Sans', sans-serif; font-weight:700;">
+    Support Bushfire Recovery
+  </h2>
+  <p style="text-align:center; max-width:800px; margin:0 auto 25px; color:#333; font-family:'Open Sans', sans-serif;">
+    If you’d like to help Australia’s communities and wildlife recover, 
+    <strong>click on the links below to donate</strong> to one of these trusted organisations.
+  </p>
+
+  <div class="pure-g" style="margin-top:25px;">
+
+    <!-- WIRES -->
+    <div class="pure-u-md-1-3" style="text-align:center;">
+      <img src="bushfire/data/bushfire.jpg" alt="Bushfire" 
+           style="max-width:90%; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+      <p style="margin:10px 0; font-family:'Open Sans', sans-serif;">Click below to help rescue and protect wildlife:</p>
+      <p>
+        <a href="https://www.wires.org.au/donate-to-wires" target="_blank" 
+           style="color:#0a2540; font-weight:700; text-decoration:none;">
+          WIRES Wildlife Rescue
+        </a>
+      </p>
+    </div>
+
+    <!-- FRRR -->
+    <div class="pure-u-md-1-3" style="text-align:center;">
+      <img src="bushfire/data/fire.jpg" alt="Fire Front" 
+           style="max-width:90%; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+      <p style="margin:10px 0; font-family:'Open Sans', sans-serif;">Click below to support rural and regional renewal:</p>
+      <p>
+        <a href="https://frrr.org.au/" target="_blank" 
+           style="color:#0a2540; font-weight:700; text-decoration:none;">
+          FRRR – Rural & Regional Renewal
+        </a>
+      </p>
+    </div>
+
+    <!-- Red Cross -->
+    <div class="pure-u-md-1-3" style="text-align:center;">
+      <img src="bushfire/data/redcross.jpg" alt="Recovery Efforts" 
+           style="max-width:90%; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+      <p style="margin:10px 0; font-family:'Open Sans', sans-serif;">Click below to donate and support bushfire recovery:</p>
+      <p>
+        <a href="https://www.redcross.org.au/donate/" target="_blank" 
+           style="color:#0a2540; font-weight:700; text-decoration:none;">
+          Australian Red Cross
+        </a>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<footer style="margin-top:40px; text-align:center; font-family:'Open Sans', sans-serif;">
+  <p style="font-size:14px; font-weight:bold; margin:5px 0;">
+    FIT3179 – Data Visualisation | Assignment Dashboard
+  </p>
+  <p style="font-size:14px; font-weight:bold; margin:5px 0;">
+    Author: Tricia De Rose
+  </p>
+  <p style="max-width:900px; margin:10px auto; line-height:1.6; font-size:13px;">
+    <a href="https://en.wikipedia.org/wiki/Bushfires_in_Australia" target="_blank">Wikipedia – Bushfires in Australia</a> |
+    <a href="https://en.wikipedia.org/wiki/List_of_major_bushfires_in_Australia" target="_blank">Wikipedia – Major Bushfires List</a> |
+    <a href="https://www.abc.net.au/news/science/2019-11-20/bushfire-ignition-source-how-we-know/11701132?utm" target="_blank">ABC News – Bushfire Ignition Sources</a> |
+    <a href="https://www.mdpi.com/2571-6255/4/3/40" target="_blank">MDPI – Bushfire Causes & Impacts</a> |
+    <a href="https://ourworldindata.org/co2-and-greenhouse-gas-emissions" target="_blank">Our World in Data – CO₂ & Greenhouse Gas Emissions</a> |
+    <a href="https://ageis.climatechange.gov.au/" target="_blank">AGEIS – Climate Data Portal</a> |
+    <a href="https://www.climatechangeinaustralia.gov.au/en/obtain-data/download-datasets/" target="_blank">Climate Change in Australia – Datasets</a> |
+    <a href="https://www.kaggle.com/datasets/nagarajbhat/australian-bush-fire-satellite-data-nasa?select=fire_archive_M6_101673.csv" target="_blank">Kaggle – Australian Bushfire Satellite Data (NASA)</a> |
+    <a href="https://ourworldindata.org/wildfires" target="_blank">Our World in Data – Wildfires</a> |
+    <a href="https://www.worldatlas.com/articles/10-animals-that-suffered-the-most-in-australian-bushfires.html?utm" target="_blank">World Atlas – Animals Affected by Bushfires</a> |
+    <a href="https://www.wwf.nl/globalassets/pdf/wwf-impacts-of-the-unprecedented-2019-2020-bushfires-on-australian-animals.pdf" target="_blank">WWF – Impacts of 2019–2020 Bushfires</a> |
+    <a href="https://www.nema.gov.au/sites/default/files/2024-08/journey%20to%20recovery_0.pdf" target="_blank">NEMA – Journey to Recovery Report (2024)</a>
+  </p>
+</footer>
+
+<!-- Vega-Lite Script -->
+<script src="bushfire/vega_lite_vis.js"></script>
 </body>
 </html>
 
@@ -97,6 +387,7 @@ The 2016 Tasmanian fires burned over 100,000 hectares, including parts of the Ta
 <!--https://vega.github.io/vega-lite/docs/joinaggregate.html-->
 <!-- https://vega.github.io/vega-lite/docs/aggregate.html-->
   
+
 
 
 

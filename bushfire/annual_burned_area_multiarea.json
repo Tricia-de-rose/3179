@@ -1,0 +1,166 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+    "text": "Vegetation Burned in Bushfires (2002–22)",
+    "subtitle": "Comparison of burned area (hectares) across major land-cover types",
+    "font": "Open Sans",
+    "subtitleFont": "Open Sans",
+    "fontSize": 18,
+    "subtitleFontSize": 13,
+    "color": "#0a2540",
+    "anchor": "start"
+  },
+
+  "data": {
+    "url": "bushfire/data/annual_burned_area_by_landcover.csv"
+  },
+
+  "transform": [
+    {
+      "fold": [
+        "other_land_categories",
+        "croplands",
+        " forests",
+        "savannas",
+        "shrublands_and_grasslands"
+      ],
+      "as": ["Vegetation_Type", "Area_Burned"]
+    },
+    {
+      "filter": "vegFilter == 'All' || lower(trim(datum.Vegetation_Type)) == lower(trim(vegFilter))"
+    }
+  ],
+
+  "params": [
+    {
+      "name": "vegFilter",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "options": [
+          "All",
+          "other_land_categories",
+          "croplands",
+          " forests",
+          "savannas",
+          "shrublands_and_grasslands"
+        ],
+        "labels": [
+          "All Types",
+          "Other Land Categories",
+          "Croplands",
+          "Forests",
+          "Savannas",
+          "Shrublands and Grasslands"
+        ],
+        "name": "Select Vegetation Type: "
+      }
+    }
+  ],
+
+  "width": "container",
+  "height": 520,
+  "autosize": { "type": "fit", "contains": "padding" },
+
+  "mark": {
+    "type": "area",
+    "opacity": 0.9,
+    "interpolate": "monotone",
+    "stroke": "white",
+    "strokeWidth": 1
+  },
+
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "temporal",
+      "title": "Year",
+      "axis": {
+        "labelFont": "Open Sans",
+        "titleFont": "Open Sans",
+        "grid": false,
+        "labelAngle": -40,
+        "labelFontSize": 12,
+        "titleFontSize": 13
+      }
+    },
+
+    "y": {
+      "field": "Area_Burned",
+      "type": "quantitative",
+      "title": "Area Burned (hectares)",
+      "stack": "zero",
+      "axis": {
+        "labelFont": "Open Sans",
+        "titleFont": "Open Sans",
+        "labelFontSize": 12,
+        "titleFontSize": 13
+      }
+    },
+
+    "color": {
+      "field": "Vegetation_Type",
+      "type": "nominal",
+      "title": "Vegetation Type",
+      "scale": {
+        "domain": [
+          "croplands",
+          " forests",
+          "other_land_categories",
+          "savannas",
+          "shrublands_and_grasslands"
+        ],
+        "range": ["#a6611a", "#116432", "#d9ef8b", "#57BD57", "#009e73"]
+      },
+      "legend": {
+        "orient": "bottom",
+        "direction": "horizontal",
+        "columns": 2,
+        "symbolSize": 150,
+        "titleFont": "Open Sans",
+        "labelFont": "Open Sans",
+        "titleFontSize": 14,
+        "labelFontSize": 12,
+        "titlePadding": 10
+      }
+    },
+
+    "tooltip": [
+      { "field": "Year", "type": "temporal", "title": "Year" },
+      { "field": "Vegetation_Type", "type": "nominal", "title": "Vegetation Type" },
+      {
+        "field": "Area_Burned",
+        "type": "quantitative",
+        "title": "Area Burned (ha)",
+        "format": ","
+      }
+    ]
+  },
+
+  "config": {
+    "font": "Open Sans",
+    "title": { "font": "Open Sans" },
+    "axis": {
+      "labelFont": "Open Sans",
+      "titleFont": "Open Sans",
+      "labelFontSize": 12,
+      "titleFontSize": 13
+    },
+    "legend": {
+      "labelFont": "Open Sans",
+      "titleFont": "Open Sans"
+    },
+    "header": {
+      "labelFont": "Open Sans",
+      "titleFont": "Open Sans"
+    },
+    "view": { "stroke": "transparent" },
+    "padding": { "bottom": 90 }
+  }
+}
+
+
+
+
+

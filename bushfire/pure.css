@@ -1,0 +1,74 @@
+.pure-g {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.pure-u-md-1-2 {
+  flex: 1 1 calc(50% - 10px);
+  max-width: calc(50% - 10px);
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.pure-u-md-1-3 {
+  flex: 1 1 calc(32% - 13px);
+  max-width: calc(32% - 13px);
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.chart-row {
+  width: 100%;
+  margin: 0 auto 60px auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.chart-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  box-sizing: border-box;
+  min-height: 420px;
+  overflow: hidden;
+  margin: 0;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+#fire-distribution {
+  width: 100%;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#fire-distribution .chart-box {
+  min-height: 520px;
+  overflow: visible;
+  margin-bottom: 40px;
+}
+
+
+
+
+
+
+/* learnt pur.css from external websites listed below  */
+/*https://pure-css.github.io/grids/?utm_source */
+/*https://www.tutorialspoint.com/purecss/purecss_grids.htm?utm_source*/
+/*https://dev.to/logrocket/creating-responsive-mobile-layouts-with-purecss-11bk?utm_source*/
+/*https://www.w3schools.com/css/css3_mediaqueries.asp*/
+/*https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-standard-resolutions-and-more/*/
+

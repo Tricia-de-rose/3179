@@ -1,0 +1,110 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Isotype chart showing Top 5 deadliest bushfires in Australia, each emoji representing 10 deaths.",
+
+  "title": {
+    "text": "Australia’s Deadliest Bushfires by Fatalities",
+    "subtitle": "Each 🧍🏼‍♂️ represents approximately 10 deaths | Top 5 deadliest bushfires",
+    "font": "Open Sans",
+    "subtitleFont": "Open Sans",
+    "fontSize": 18,
+    "subtitleFontSize": 13,
+    "color": "#0a2540",
+    "anchor": "start"
+  },
+
+  "width": 470,
+  "height": 420,
+
+  "data": { "url": "bushfire/data/m672_busfires_au.csv" },
+
+  "transform": [
+    { "calculate": "toNumber(datum.Fatalities)", "as": "Deaths" },
+    { "filter": "isValid(datum.Deaths) && datum.Deaths > 0" },
+    {
+      "window": [{ "op": "rank", "as": "Rank" }],
+      "sort": [{ "field": "Deaths", "order": "descending" }]
+    },
+    { "filter": "datum.Rank <= 5" },
+    { "calculate": "ceil(datum.Deaths / 10)", "as": "icon_count" },
+    { "calculate": "sequence(1, datum.icon_count + 1, 1)", "as": "icon_repeat" },
+    { "flatten": ["icon_repeat"] }
+  ],
+
+  "mark": {
+    "type": "text",
+    "align": "center",
+    "baseline": "middle",
+    "fontSize": 50,
+    "dx": 5
+  },
+
+  "encoding": {
+    "y": {
+      "field": "Name",
+      "type": "nominal",
+      "title": "Bushfire Name",
+      "sort": "-x",
+      "axis": {
+        "labelFont": "Open Sans",
+        "titleFont": "Open Sans",
+        "labelFontSize": 12,
+        "titleFontSize": 13
+      }
+    },
+    "x": {
+      "field": "icon_repeat",
+      "type": "quantitative",
+      "title": "Fatalities (in groups of 10)",
+      "scale": { "domain": [0, 20] },
+      "axis": {
+        "labelFont": "Open Sans",
+        "titleFont": "Open Sans",
+        "grid": false,
+        "values": [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20],
+        "tickCount": 11,
+        "titleFontSize": 13,
+        "labelFontSize": 12
+      }
+    },
+    "text": { "value": "🧍🏼‍♂️" },
+    "tooltip": [
+      { "field": "Name", "title": "Bushfire" },
+      { "field": "Date", "type": "nominal", "title": "Date" },
+      { "field": "Deaths", "type": "quantitative", "title": "Fatalities" },
+      {
+        "field": "Area_burned_ha",
+        "type": "quantitative",
+        "title": "Area Burned (ha)",
+        "format": ","
+      },
+      {
+        "field": "Homes_destroyed",
+        "type": "quantitative",
+        "title": "Homes Destroyed"
+      },
+      {
+        "field": "Other_buildings",
+        "type": "quantitative",
+        "title": "Other Buildings"
+      }
+    ]
+  },
+
+  "config": {
+    "font": "Open Sans",
+    "title": { "font": "Open Sans" },
+    "axis": {
+      "labelFont": "Open Sans",
+      "titleFont": "Open Sans",
+      "labelFontSize": 12,
+      "titleFontSize": 13,
+      "grid": false
+    },
+    "legend": { "disable": true },
+    "header": { "labelFont": "Open Sans", "titleFont": "Open Sans" },
+    "view": { "stroke": "transparent" }
+  }
+}
+
+

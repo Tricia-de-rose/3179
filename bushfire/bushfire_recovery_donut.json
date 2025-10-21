@@ -1,0 +1,126 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Interactive donut chart showing bushfire recovery funding by sector and category (2020).",
+
+  "title": {
+    "text": "National Bushfire Recovery Funding (2020)",
+    "subtitle": "Each sector’s category breakdown (AUD million)",
+    "font": "Open Sans",
+    "subtitleFont": "Open Sans",
+    "color": "#0a2540",
+    "fontSize": 18,
+    "subtitleFontSize": 13,
+    "anchor": "start"
+  },
+
+  "data": { "url": "bushfire/data/bushfire_recovery_funding.csv" },
+
+  "params": [
+    {
+      "name": "sectorFilter",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "options": ["All", "Social", "Economic", "Environmental", "Built"],
+        "labels": ["All Sectors", "Social", "Economic", "Environmental", "Built"],
+        "name": "Select Sector: "
+      }
+    }
+  ],
+
+  "transform": [
+    { "filter": "sectorFilter == 'All' || datum.Sector == sectorFilter" },
+    {
+      "aggregate": [
+        { "op": "sum", "field": "Amount_AUD_million", "as": "TotalFunding" }
+      ],
+      "groupby": ["Sector", "Category"]
+    },
+    {
+      "calculate": "sectorFilter == 'All' ? datum.Sector : datum.Category",
+      "as": "Label"
+    }
+  ],
+
+  "mark": { "type": "arc", "outerRadius": 110, "innerRadius": 50 },
+
+  "encoding": {
+    "theta": { "field": "TotalFunding", "type": "quantitative" },
+    "color": {
+      "field": "Label",
+      "type": "nominal",
+      "title": "Funding Category",
+      "scale": {
+        "range": [
+          "#003f5c",
+          "#1b998b",
+          "#efb45c",
+          "#c85a2e",
+          "#9fa2a4",
+          "#6a7fdb",
+          "#2d847f",
+          "#e67373"
+        ]
+      },
+      "legend": {
+        "orient": "bottom",
+        "direction": "horizontal",
+        "titleAnchor": "middle",
+        "labelFont": "Open Sans",
+        "titleFont": "Open Sans",
+        "titleFontSize": 13,
+        "labelFontSize": 12,
+        "symbolSize": 120,
+        "columns": 2,
+        "offset": 8
+      }
+    },
+    "tooltip": [
+      { "field": "Sector", "type": "nominal", "title": "Sector" },
+      { "field": "Category", "type": "nominal", "title": "Category" },
+      {
+        "field": "TotalFunding",
+        "type": "quantitative",
+        "title": "Funding (AUD million)",
+        "format": ".1f"
+      }
+    ]
+  },
+
+  "width": "container",
+  "height": 400,
+
+  "config": {
+    "font": "Open Sans",
+    "title": { "font": "Open Sans" },
+    "axis": {
+      "labelFont": "Open Sans",
+      "titleFont": "Open Sans",
+      "labelFontSize": 12,
+      "titleFontSize": 13
+    },
+    "legend": {
+      "labelFont": "Open Sans",
+      "titleFont": "Open Sans"
+    },
+    "header": {
+      "labelFont": "Open Sans",
+      "titleFont": "Open Sans"
+    },
+    "view": { "stroke": "transparent" },
+    "padding": { "top": 0, "left": 10, "right": 20, "bottom": 70 },
+    "autosize": { "type": "fit", "contains": "padding" }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

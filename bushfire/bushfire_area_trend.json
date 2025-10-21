@@ -1,0 +1,63 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Annual Area Burned by Bushfires in Australia (2000–2022)",
+    "fontSize": 18,
+    "fontWeight": "bold",
+    "anchor": "start"
+  },
+  "width": 800,
+  "height": 400,
+  "data": {
+    "url": "bushfire/data/australian_annual_bushfire_area.csv"
+  },
+  "transform": [
+    {
+      "fold": ["Area_burnt_ha", "area_burned_ha", "Area", "Value"],
+      "as": ["ColumnName", "Area"]
+    },
+    {
+      "calculate": "toNumber(datum.Area)",
+      "as": "Area_Burned"
+    },
+    {
+      "filter": "isValid(datum.Area_Burned) && isValid(datum.Year)"
+    }
+  ],
+  "mark": {
+    "type": "line",
+    "color": "#e4572e",
+    "point": {"filled": true, "color": "#1d3557", "size": 60},
+    "strokeWidth": 3
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": "Year",
+      "axis": {"labelAngle": 0}
+    },
+    "y": {
+      "field": "Area_Burned",
+      "type": "quantitative",
+      "title": "Area Burned (hectares)",
+      "axis": {"format": "~s"}
+    },
+    "tooltip": [
+      {"field": "Year", "title": "Year"},
+      {"field": "Area_Burned", "title": "Area Burned (ha)", "format": ","}
+    ]
+  },
+  "config": {
+    "background": "#fafafa",
+    "axis": {"labelFontSize": 12, "titleFontSize": 13},
+    "legend": {"titleFontSize": 12, "labelFontSize": 11}
+  }
+}
+
+
+
+
+
+
+

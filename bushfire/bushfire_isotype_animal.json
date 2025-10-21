@@ -1,0 +1,98 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Simplified isotype chart showing animal groups affected by bushfires in Australia.",
+
+  "title": {
+    "text": "Animals Most Affected by Bushfires in Australia",
+    "subtitle": "Each symbol represents 10% of total animals affected",
+    "font": "Open Sans",
+    "subtitleFont": "Open Sans",
+    "fontSize": 18,
+    "subtitleFontSize": 13,
+    "color": "#0a2540",
+    "anchor": "start"
+  },
+
+  "width": "container",
+  "height": 420,
+
+  "data": { "url": "bushfire/data/bushfire_animal_impacts.csv" },
+
+  "transform": [
+    {
+      "calculate": "datum['Category/Type of Animal'] == 'Mammals' ? '🐨' : datum['Category/Type of Animal'] == 'Reptiles' ? '🦎' : datum['Category/Type of Animal'] == 'Birds' ? '🐦' : datum['Category/Type of Animal'] == 'Frogs' ? '🐸' : datum['Category/Type of Animal'] == 'Fish' ? '🐟' : '🐾'",
+      "as": "emoji"
+    },
+    {
+      "calculate": "datum['Category/Type of Animal'] == 'Mammals' ? 5 : datum['Category/Type of Animal'] == 'Reptiles' ? 9 : datum['Category/Type of Animal'] == 'Birds' ? 6 : datum['Category/Type of Animal'] == 'Frogs' ? 2 : datum['Category/Type of Animal'] == 'Fish' ? 2 : 0",
+      "as": "icon_count"
+    },
+    { "calculate": "sequence(1, datum.icon_count + 1)", "as": "icon_seq" },
+    { "flatten": ["icon_seq"] },
+    { "calculate": "datum.icon_seq * 10", "as": "Percentage_Icons" }
+  ],
+
+  "mark": {
+    "type": "text",
+    "fontSize": 32,
+    "align": "center",
+    "baseline": "middle"
+  },
+
+  "encoding": {
+    "x": {
+      "field": "Category/Type of Animal",
+      "type": "nominal",
+      "axis": {
+        "title": "Animal Group",
+        "labelFont": "Open Sans",
+        "titleFont": "Open Sans",
+        "labelFontSize": 13,
+        "titleFontSize": 14,
+        "labelAngle": 0,
+        "labelPadding": 5
+      }
+    },
+    "y": {
+      "field": "Percentage_Icons",
+      "type": "quantitative",
+      "scale": { "domain": [0, 100] },
+      "axis": {
+        "title": "Percentage of Total (%)",
+        "labelFont": "Open Sans",
+        "titleFont": "Open Sans",
+        "labelFontSize": 12,
+        "titleFontSize": 13,
+        "values": [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+        "grid": false
+      }
+    },
+    "text": { "field": "emoji" },
+    "tooltip": [
+      { "field": "Category/Type of Animal", "title": "Animal Group" },
+      { "field": "Percentage_of_Total", "title": "Percentage of Total", "format": ".1f" }
+    ]
+  },
+
+  "config": {
+    "font": "Open Sans",
+    "title": { "font": "Open Sans" },
+    "axis": {
+      "labelFont": "Open Sans",
+      "titleFont": "Open Sans",
+      "labelFontSize": 12,
+      "titleFontSize": 13
+    },
+    "header": { "labelFont": "Open Sans", "titleFont": "Open Sans" },
+    "legend": { "disable": true },
+    "view": { "stroke": "transparent" }
+  }
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,133 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+    "text": "Largest and Most Destructive Bushfires in Australia (1851–2021)",
+    "subtitle": "Filter to view Top 5 or Top 10 fires by area burned",
+    "font": "Open Sans",
+    "subtitleFont": "Open Sans",
+    "fontSize": 18,
+    "subtitleFontSize": 13,
+    "anchor": "middle",
+    "color": "#0a2540"
+  },
+
+  "data": { "url": "bushfire/data/m672_busfires_au.csv" },
+
+  "params": [
+    {
+      "name": "fireFilter",
+      "value": "Top 5",
+      "bind": {
+        "input": "select",
+        "options": ["Top 5", "Top 10"],
+        "name": "Show: "
+      }
+    }
+  ],
+
+  "transform": [
+    { "calculate": "toNumber(datum.Fatalities)", "as": "Fatalities_num" },
+    { "calculate": "toNumber(datum.Area_burned_ha)", "as": "Area_ha" },
+    { "calculate": "toNumber(datum.Homes_destroyed)", "as": "Homes" },
+    { "calculate": "toNumber(datum.Other_buildings)", "as": "Buildings" },
+    {
+      "calculate": "replace(datum.Name, 'Australian bushfire season', 'Bushfire Season')",
+      "as": "Short_Name"
+    },
+    {
+      "window": [{ "op": "rank", "as": "Rank" }],
+      "sort": [{ "field": "Area_ha", "order": "descending" }]
+    },
+    { "filter": "fireFilter == 'Top 5' ? datum.Rank <= 5 : datum.Rank <= 10" }
+  ],
+
+  "width": 300,
+  "height": 280,
+
+  "mark": { "type": "bar", "opacity": 0.9 },
+
+  "encoding": {
+    "y": {
+      "field": "Short_Name",
+      "type": "nominal",
+      "title": null,
+      "sort": { "field": "Area_ha", "order": "descending" },
+      "axis": {
+        "labelFont": "Open Sans",
+        "labelFontSize": 12,
+        "labelFontWeight": "normal",
+        "labelLimit": 190
+      }
+    },
+    "x": {
+      "field": "Area_ha",
+      "type": "quantitative",
+      "title": "Area Burned (hectares)",
+      "scale": { "domain": [0, 117000000] },
+      "axis": {
+        "labelFont": "Open Sans",
+        "titleFont": "Open Sans",
+        "titleFontSize": 13,
+        "tickCount": 6,
+        "labelExpr": "datum.value / 1000000 + 'M'"
+      }
+    },
+    "color": { "value": "#A1CAE8" },
+    "tooltip": [
+      { "field": "Name", "title": "Bushfire" },
+      { "field": "Date", "title": "Date" },
+      { "field": "Area_ha", "title": "Area Burned (ha)", "format": "," },
+      { "field": "Fatalities_num", "title": "Fatalities" },
+      { "field": "Homes", "title": "Homes Destroyed" },
+      { "field": "Buildings", "title": "Other Buildings Damaged" }
+    ]
+  },
+
+  "config": {
+    "font": "Open Sans",
+    "title": { "font": "Open Sans" },
+    "axis": {
+      "labelFont": "Open Sans",
+      "titleFont": "Open Sans",
+      "labelFontSize": 12,
+      "titleFontSize": 13
+    },
+    "legend": {
+      "labelFont": "Open Sans",
+      "titleFont": "Open Sans"
+    },
+    "header": {
+      "labelFont": "Open Sans",
+      "titleFont": "Open Sans"
+    },
+    "view": { "stroke": "transparent" }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

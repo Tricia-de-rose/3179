@@ -1,0 +1,83 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+    "text": "Australia’s Rising CO₂ Emissions (1950–2023)",
+    "font": "Open Sans",
+    "fontSize": 18,
+    "fontWeight": "bold",
+    "anchor": "middle",
+    "color": "#0a2540",
+    "dy": 0,
+    "offset": 15
+  },
+
+  "width": "container",
+  "height": 300,
+  "autosize": { "type": "fit", "contains": "padding" },
+
+  "data": { "url": "bushfire/data/co2_emissions_per_capita.csv" },
+
+  "mark": {
+    "type": "line",
+    "point": { "filled": true, "size": 25, "opacity": 0.85 },
+    "strokeWidth": 2.5,
+    "color": "#1d609c"
+  },
+
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "temporal",
+      "axis": {
+        "title": "Year",
+        "grid": false,
+        "labelFont": "Open Sans",
+        "titleFont": "Open Sans",
+        "labelFontSize": 12,
+        "titleFontSize": 13,
+        "labelAngle": 0,
+        "tickCount": 7,
+        "labelPadding": 2
+      }
+    },
+    "y": {
+      "field": "Annual_C02_emission_per_capita",
+      "type": "quantitative",
+      "axis": {
+        "title": "CO₂ Emissions per Capita (tonnes)",
+        "titleFont": "Open Sans",
+        "labelFont": "Open Sans",
+        "titleFontWeight": "bold",
+        "labelFontSize": 12,
+        "titleFontSize": 13,
+        "labelPadding": 2
+      },
+      "scale": { "zero": true }
+    },
+    "tooltip": [
+      { "field": "Year", "type": "temporal", "title": "Year" },
+      {
+        "field": "Annual_C02_emission_per_capita",
+        "type": "quantitative",
+        "title": "CO₂ per Capita (tonnes)",
+        "format": ".2f"
+      }
+    ]
+  },
+
+  "config": {
+    "font": "Open Sans",
+    "title": { "font": "Open Sans" },
+    "axis": { "labelFont": "Open Sans", "titleFont": "Open Sans" },
+    "legend": { "labelFont": "Open Sans", "titleFont": "Open Sans" },
+    "header": { "labelFont": "Open Sans", "titleFont": "Open Sans" },
+    "padding": { "top": 20, "bottom": 5, "left": 10, "right": 10 },
+    "view": { "stroke": "transparent" },
+    "background": "white"
+  }
+}
+
+
+
+

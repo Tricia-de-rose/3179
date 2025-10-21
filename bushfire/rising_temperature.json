@@ -1,0 +1,123 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+    "text": "Australia’s Monthly Temperature Anomalies (2000–2023)",
+    "subtitle": "Dots show each month’s anomaly relative to 2000–2023 average.",
+    "font": "Open Sans",
+    "subtitleFont": "Open Sans",
+    "fontSize": 18,
+    "subtitleFontSize": 13,
+    "color": "#0a2540",
+    "anchor": "middle"
+  },
+
+  "width": "container",
+  "height": 220,
+
+  "data": {
+    "url": "bushfire/data/country-level-monthly-temperature-anomalies.csv"
+  },
+
+  "transform": [
+    { "filter": "datum.Entity == 'Australia'" },
+    {
+      "fold": [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ],
+      "as": ["Month", "Anomaly"]
+    },
+    {
+      "calculate": "indexof(['January','February','March','April','May','June','July','August','September','October','November','December'], datum.Month)+1",
+      "as": "MonthNumber"
+    },
+    { "filter": "yearSelect == 'All' || datum.Year == +yearSelect" }
+  ],
+
+  "params": [
+    {
+      "name": "yearSelect",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "options": [
+          "All",
+          2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007,
+          2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015,
+          2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023
+        ],
+        "name": "Select Year: "
+      }
+    }
+  ],
+
+  "mark": {
+    "type": "circle",
+    "size": 80,
+    "opacity": 0.8
+  },
+
+  "encoding": {
+    "x": {
+      "field": "MonthNumber",
+      "type": "ordinal",
+      "title": "Month",
+      "axis": {
+        "labelAngle": 0,
+        "labelFont": "Open Sans",
+        "titleFont": "Open Sans"
+      }
+    },
+    "y": {
+      "field": "Anomaly",
+      "type": "quantitative",
+      "title": "Temperature Anomaly (°C)",
+      "axis": {
+        "labelFont": "Open Sans",
+        "titleFont": "Open Sans"
+      }
+    },
+    "color": {
+      "field": "Anomaly",
+      "type": "quantitative",
+      "scale": {
+        "domain": [-2, 3],
+        "range": ["#2166ac", "#f7f7f7", "#990B20"]
+      },
+      "legend": {
+        "title": "Anomaly Intensity (°C)",
+        "labelFont": "Open Sans",
+        "titleFont": "Open Sans"
+      }
+    },
+    "tooltip": [
+      { "field": "Year" },
+      { "field": "Month" },
+      { "field": "Anomaly", "format": ".2f" }
+    ]
+  },
+
+  "config": {
+    "font": "Open Sans",
+    "title": { "font": "Open Sans" },
+    "axis": {
+      "labelFont": "Open Sans",
+      "titleFont": "Open Sans",
+      "labelFontSize": 12,
+      "titleFontSize": 13
+    },
+    "legend": {
+      "labelFont": "Open Sans",
+      "titleFont": "Open Sans",
+      "labelFontSize": 12,
+      "titleFontSize": 13
+    },
+    "header": { "labelFont": "Open Sans", "titleFont": "Open Sans" },
+    "view": { "stroke": "transparent" },
+    "padding": { "top": 10, "bottom": 20, "left": 20, "right": 20 }
+  }
+}
+
+
+

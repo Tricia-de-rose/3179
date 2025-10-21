@@ -1,0 +1,164 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+    "text": "Greenhouse Gas Emissions by State and Sector (2023)",
+    "subtitle": "Measured in million tonnes of CO₂ equivalent (Mt CO₂-e)",
+    "font": "Open Sans",
+    "subtitleFont": "Open Sans",
+    "fontSize": 18,
+    "subtitleFontSize": 13,
+    "fontWeight": "bold",
+    "anchor": "middle",
+    "color": "#0a2540",
+    "dy": -5
+  },
+
+  "width": "container",
+  "height": 400,
+  "autosize": { "type": "fit", "contains": "padding" },
+
+  "data": { "url": "bushfire/data/Emissions_by_state_and_territory.csv" },
+
+  "transform": [
+    { "filter": "datum.Year == 2023" },
+    {
+      "fold": [
+        "Energy_Mt",
+        "LandUse_Mt",
+        "Agriculture_Mt",
+        "Industrial_Mt",
+        "Waste_Mt"
+      ],
+      "as": ["Sector", "Emissions_Mt"]
+    },
+    {
+      "calculate": "indexof(['Energy_Mt','LandUse_Mt','Agriculture_Mt','Industrial_Mt','Waste_Mt'], datum.Sector)",
+      "as": "SectorOrder"
+    }
+  ],
+
+  "params": [
+    {
+      "name": "sector_filter",
+      "select": { "type": "point", "fields": ["Sector"] },
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Energy_Mt",
+          "LandUse_Mt",
+          "Agriculture_Mt",
+          "Industrial_Mt",
+          "Waste_Mt"
+        ],
+        "labels": [
+          "Show All Sectors",
+          "Energy",
+          "Land Use",
+          "Agriculture",
+          "Industrial",
+          "Waste"
+        ],
+        "name": "Filter: "
+      }
+    }
+  ],
+
+  "mark": { "type": "bar", "cornerRadiusEnd": 3 },
+
+  "encoding": {
+    "y": {
+      "field": "State",
+      "type": "nominal",
+      "title": "State / Territory",
+      "sort": "-x",
+      "axis": {
+        "labelFont": "Open Sans",
+        "titleFont": "Open Sans",
+        "labelFontSize": 13
+      }
+    },
+    "x": {
+      "aggregate": "sum",
+      "field": "Emissions_Mt",
+      "type": "quantitative",
+      "stack": "normalize",
+      "title": "Proportion of Total Emissions",
+      "axis": {
+        "titleFont": "Open Sans",
+        "labelFont": "Open Sans",
+        "titleFontSize": 14,
+        "labelFontSize": 12
+      }
+    },
+    "color": {
+      "field": "Sector",
+      "type": "nominal",
+      "title": "Emission Source",
+      "scale": {
+        "domain": [
+          "Energy_Mt",
+          "LandUse_Mt",
+          "Agriculture_Mt",
+          "Industrial_Mt",
+          "Waste_Mt"
+        ],
+        "range": ["#7D6F66", "#6F667D", "#66747D", "#667D6F", "#CBBFA0"]
+      },
+      "legend": {
+        "orient": "bottom",
+        "direction": "horizontal",
+        "titleFont": "Open Sans",
+        "labelFont": "Open Sans",
+        "title": "",
+        "labelFontSize": 12,
+        "symbolSize": 90,
+        "offset": 10
+      }
+    },
+    "order": { "field": "SectorOrder", "type": "ordinal" },
+    "tooltip": [
+      { "field": "State", "title": "State" },
+      { "field": "Sector", "title": "Sector" },
+      {
+        "aggregate": "sum",
+        "field": "Emissions_Mt",
+        "type": "quantitative",
+        "format": ".2f",
+        "title": "Emissions (Mt CO₂-e)"
+      }
+    ],
+    "opacity": {
+      "condition": { "param": "sector_filter", "value": 1 },
+      "value": 0.5
+    }
+  },
+
+  
+  "config": {
+  "font": "Open Sans",
+  "title": { "font": "Open Sans" },
+  "axis": {
+    "labelFont": "Open Sans",
+    "titleFont": "Open Sans",
+    "labelFontSize": 12,
+    "titleFontSize": 14,
+    "titlePadding": 8
+  },
+  "legend": {
+    "orient": "bottom",
+    "direction": "horizontal",
+    "labelFont": "Open Sans",
+    "titleFont": "Open Sans",
+    "labelFontSize": 13,
+    "symbolSize": 100,
+    "symbolType": "circle",
+    "offset": 10
+  },
+  "header": { "labelFont": "Open Sans", "titleFont": "Open Sans" },
+  "view": { "stroke": "transparent" },
+  "padding": { "top": 10, "bottom": 80, "left": 20, "right": 20 }
+}
+}
+

@@ -1,0 +1,168 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+    "text": "Forest Fire Danger Index (FFDI) Across Australian States",
+    "font": "Open Sans",
+    "fontSize": 18,
+    "fontWeight": "bold",
+    "anchor": "middle",
+    "color": "#0a2540"
+  },
+
+  "width": "container",
+  "height": 580,
+  "autosize": { "type": "fit", "contains": "padding" },
+
+  "params": [
+    {
+      "name": "selectedIndex",
+      "value": "Avg_Ann_FFDI",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Avg_Ann_FFDI",
+          "DPY_12_25_High",
+          "DPY_25_50_Very_High",
+          "DPY_50_75_Severe",
+          "DPY_75_100_Extreme",
+          "DPY_over_100_Catastrophic"
+        ],
+        "labels": [
+          "Average Annual FFDI",
+          "High (12–25)",
+          "Very High (25–50)",
+          "Severe (50–75)",
+          "Extreme (75–100)",
+          "Catastrophic (>100)"
+        ],
+        "name": "Select FFDI Category: "
+      }
+    },
+    {
+      "name": "yearFilter",
+      "value": 2030,
+      "bind": {
+        "input": "select",
+        "options": [1980, 1990, 2000, 2010, 2020, 2030],
+        "name": "Select Year: "
+      }
+    }
+  ],
+
+  "projection": { "type": "mercator", "center": [134, -25], "scale": 600 },
+
+  "layer": [
+    {
+      "data": {
+        "url": "bushfire/ne_10m_admin_1_states_provinces.json",
+        "format": { "type": "topojson", "feature": "ne_10m_admin_1_states_provinces" }
+      },
+      "mark": { "type": "geoshape", "fill": "#f2f2f2", "stroke": "#ccc", "strokeWidth": 0.5 }
+    },
+    {
+      "data": { "url": "bushfire/data/NRM_fire_proj_summary.csv" },
+      "transform": [
+        { "filter": "datum.Year == yearFilter" },
+        {
+          "lookup": "State",
+          "from": {
+            "data": {
+              "url": "bushfire/ne_10m_admin_1_states_provinces.json",
+              "format": {
+                "type": "topojson",
+                "feature": "ne_10m_admin_1_states_provinces"
+              }
+            },
+            "key": "properties.name",
+            "fields": ["geometry"]
+          },
+          "as": ["geo"]
+        },
+        {
+          "fold": [
+            "Avg_Ann_FFDI",
+            "DPY_12_25_High",
+            "DPY_25_50_Very_High",
+            "DPY_50_75_Severe",
+            "DPY_75_100_Extreme",
+            "DPY_over_100_Catastrophic"
+          ],
+          "as": ["Index", "Value"]
+        },
+        { "filter": "datum.Index == selectedIndex" }
+      ],
+      "mark": { "type": "geoshape", "stroke": "white", "strokeWidth": 0.8 },
+      "encoding": {
+        "shape": { "field": "geo", "type": "geojson" },
+        "color": {
+          "field": "Value",
+          "type": "quantitative",
+          "title": "FFDI Value",
+          "scale": {
+            "range": [
+              "#FFFFCC",
+              "#FFD54F",
+              "#FFB300",
+              "#FB8C00",
+              "#E64A19",
+              "#B71C1C"
+            ]
+          },
+          "legend": {
+            "labelFont": "Open Sans",
+            "titleFont": "Open Sans",
+            "titleFontSize": 13,
+            "labelFontSize": 12
+          }
+        },
+        "tooltip": [
+          { "field": "State", "title": "State" },
+          { "field": "Year", "title": "Year" },
+          { "field": "Index", "title": "FFDI Category" },
+          { "field": "Value", "title": "Value" }
+        ]
+      }
+    },
+    {
+      "data": { "url": "bushfire/data/NRM_fire_proj_summary.csv" },
+      "transform": [
+        {
+          "aggregate": [
+            { "op": "mean", "field": "Lat", "as": "Lat" },
+            { "op": "mean", "field": "Lon", "as": "Lon" }
+          ],
+          "groupby": ["State"]
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "font": "Open Sans",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#0a2540",
+        "align": "center"
+      },
+      "encoding": {
+        "longitude": { "field": "Lon", "type": "quantitative" },
+        "latitude": { "field": "Lat", "type": "quantitative" },
+        "text": { "field": "State" }
+      }
+    }
+  ],
+
+  "config": {
+    "font": "Open Sans",
+    "title": { "font": "Open Sans" },
+    "axis": { "labelFont": "Open Sans", "titleFont": "Open Sans" },
+    "legend": { "labelFont": "Open Sans", "titleFont": "Open Sans" },
+    "header": { "labelFont": "Open Sans", "titleFont": "Open Sans" },
+    "view": { "stroke": "transparent" }
+  }
+}
+
+
+
+
+
+

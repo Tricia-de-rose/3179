@@ -1,0 +1,122 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Dual chart with single left Y-axis and dropdown toggle between bar, line, or both.",
+
+  "title": {
+    "text": "Australia’s PM2.5 Emissions from Wildfires",
+    "subtitle": "Yearly PM2.5 emissions from bushfires (2003–2025)",
+    "font": "Open Sans",
+    "subtitleFont": "Open Sans",
+    "color": "#0a2540",
+    "fontSize": 18,
+    "subtitleFontSize": 13,
+    "anchor": "start"
+  },
+
+  "width": "container",
+  "height": 380,
+
+  "data": {
+    "url": "bushfire/data/annual_pm25_emissions_from_wildfires.csv"
+  },
+
+  "params": [
+    {
+      "name": "viewMode",
+      "value": "Both",
+      "bind": {
+        "input": "select",
+        "options": ["Both", "Line", "Bar"],
+        "labels": ["Show Both", "Show Line Only", "Show Bar Only"],
+        "name": "Select View: "
+      }
+    }
+  ],
+
+  "layer": [
+    {
+      "transform": [{ "filter": "viewMode == 'Both' || viewMode == 'Bar'" }],
+      "mark": { "type": "bar", "color": "#9e9e9e", "opacity": 0.8 },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "temporal",
+          "axis": {
+            "title": "Year",
+            "labelAngle": 0,
+            "labelFont": "Open Sans",
+            "titleFont": "Open Sans",
+            "labelFontSize": 12,
+            "titleFontSize": 13
+          }
+        },
+        "y": {
+          "field": "Annual_PM25_emissions_from_wildfires",
+          "type": "quantitative",
+          "axis": {
+            "title": "Emissions (tonnes)",
+            "labelFont": "Open Sans",
+            "titleFont": "Open Sans",
+            "labelFontSize": 12,
+            "titleFontSize": 13,
+            "grid": false
+          }
+        },
+        "tooltip": [
+          { "field": "Year", "type": "temporal", "title": "Year" },
+          {
+            "field": "Annual_PM25_emissions_from_wildfires",
+            "type": "quantitative",
+            "title": "Emissions (tonnes)",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "transform": [{ "filter": "viewMode == 'Both' || viewMode == 'Line'" }],
+      "mark": {
+        "type": "line",
+        "color": "#1d609c",
+        "strokeWidth": 3,
+        "point": { "filled": true, "color": "#1d609c", "size": 60 }
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "temporal",
+          "title": "Year",
+          "axis": {
+            "labelAngle": 45,
+            "labelFont": "Open Sans",
+            "titleFont": "Open Sans",
+            "labelFontSize": 12,
+            "titleFontSize": 13
+          }
+        },
+        "y": {
+          "field": "Annual_PM25_emissions_from_wildfires",
+          "type": "quantitative",
+          "axis": { "labelFont": "Open Sans", "titleFont": "Open Sans" }
+        }
+      }
+    }
+  ],
+
+  "config": {
+    "font": "Open Sans",
+    "title": { "font": "Open Sans" },
+    "axis": {
+      "labelFont": "Open Sans",
+      "titleFont": "Open Sans",
+      "labelFontSize": 12,
+      "titleFontSize": 13,
+      "grid": false
+    },
+    "header": { "labelFont": "Open Sans", "titleFont": "Open Sans" },
+    "legend": { "labelFont": "Open Sans", "titleFont": "Open Sans" },
+    "view": { "stroke": "transparent" },
+    "padding": { "bottom": 50 }
+  }
+}
+

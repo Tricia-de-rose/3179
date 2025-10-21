@@ -1,0 +1,157 @@
+State,Year,Energy_Mt,LandUse_Mt,Agriculture_Mt,Industrial_Mt,Waste_Mt
+Australian Capital Territory,2004,1.2,0.05,0.03,0.21,0.02
+Australian Capital Territory,2005,1.5,0.06,0.04,0.26,0.03
+Australian Capital Territory,2006,0.9,0.04,0.03,0.18,0.02
+Australian Capital Territory,2007,1.8,0.07,0.05,0.28,0.03
+Australian Capital Territory,2008,1.4,0.05,0.04,0.23,0.02
+Australian Capital Territory,2009,1.0,0.06,0.03,0.19,0.02
+Australian Capital Territory,2010,2.1,0.08,0.05,0.31,0.03
+Australian Capital Territory,2011,1.7,0.06,0.04,0.27,0.03
+Australian Capital Territory,2012,1.2,0.05,0.03,0.22,0.02
+Australian Capital Territory,2013,2.4,0.08,0.05,0.33,0.03
+Australian Capital Territory,2014,1.6,0.06,0.04,0.25,0.03
+Australian Capital Territory,2015,1.1,0.05,0.03,0.20,0.02
+Australian Capital Territory,2016,2.0,0.07,0.05,0.30,0.03
+Australian Capital Territory,2017,1.3,0.06,0.04,0.23,0.02
+Australian Capital Territory,2018,1.0,0.04,0.03,0.18,0.02
+Australian Capital Territory,2019,1.8,0.07,0.05,0.28,0.03
+Australian Capital Territory,2020,2.2,0.08,0.05,0.32,0.03
+Australian Capital Territory,2021,1.5,0.06,0.04,0.25,0.03
+Australian Capital Territory,2022,1.9,0.07,0.05,0.29,0.03
+Australian Capital Territory,2023,1.6,0.06,0.04,0.24,0.03
+New South Wales,2004,80.1,18.2,19.2,10.5,4.0
+New South Wales,2005,90.4,17.9,20.0,12.8,4.3
+New South Wales,2006,76.3,19.3,18.6,9.8,3.9
+New South Wales,2007,101.2,17.0,21.1,13.7,4.4
+New South Wales,2008,88.7,18.5,19.7,11.5,4.1
+New South Wales,2009,84.0,19.0,19.1,10.9,4.0
+New South Wales,2010,110.3,16.8,21.5,14.1,4.5
+New South Wales,2011,95.2,18.0,19.9,12.1,4.2
+New South Wales,2012,86.6,18.8,18.8,10.7,4.0
+New South Wales,2013,120.4,16.5,21.9,14.9,4.6
+New South Wales,2014,91.3,18.2,19.6,11.9,4.2
+New South Wales,2015,80.7,18.9,18.5,10.4,3.9
+New South Wales,2016,104.8,17.3,21.0,13.3,4.4
+New South Wales,2017,88.0,18.4,19.4,11.5,4.1
+New South Wales,2018,77.5,19.2,18.3,9.9,3.8
+New South Wales,2019,108.1,17.0,21.3,13.9,4.5
+New South Wales,2020,112.4,16.6,21.7,14.4,4.6
+New South Wales,2021,95.8,18.0,19.8,12.2,4.2
+New South Wales,2022,101.7,17.5,20.5,13.1,4.3
+New South Wales,2023,90.6,18.3,19.5,11.6,4.1
+Northern Territory,2004,9.8,8.1,2.7,0.10,0.17
+Northern Territory,2005,12.4,9.8,3.4,0.14,0.20
+Northern Territory,2006,8.2,7.9,2.4,0.08,0.16
+Northern Territory,2007,14.9,10.3,3.9,0.17,0.22
+Northern Territory,2008,11.6,9.0,3.1,0.12,0.18
+Northern Territory,2009,10.3,8.4,2.8,0.10,0.17
+Northern Territory,2010,15.7,10.5,4.0,0.18,0.22
+Northern Territory,2011,12.2,9.2,3.2,0.13,0.19
+Northern Territory,2012,9.7,8.1,2.6,0.10,0.17
+Northern Territory,2013,17.4,10.7,4.2,0.19,0.23
+Northern Territory,2014,13.0,9.3,3.3,0.14,0.19
+Northern Territory,2015,8.5,7.8,2.5,0.08,0.16
+Northern Territory,2016,16.0,10.4,4.1,0.18,0.22
+Northern Territory,2017,10.9,8.7,2.9,0.11,0.18
+Northern Territory,2018,9.2,8.0,2.6,0.09,0.17
+Northern Territory,2019,14.7,10.2,3.8,0.17,0.21
+Northern Territory,2020,15.9,10.5,4.0,0.18,0.22
+Northern Territory,2021,12.1,9.0,3.3,0.13,0.19
+Northern Territory,2022,13.5,9.6,3.6,0.15,0.20
+Northern Territory,2023,11.3,8.8,3.0,0.12,0.18
+Queensland,2004,98.4,15.2,21.0,5.3,2.5
+Queensland,2005,115.8,14.5,24.3,6.5,2.9
+Queensland,2006,89.7,16.3,19.9,4.8,2.4
+Queensland,2007,132.4,13.8,26.5,7.3,3.0
+Queensland,2008,108.6,15.1,22.1,5.9,2.7
+Queensland,2009,95.2,15.8,20.0,5.1,2.5
+Queensland,2010,142.0,13.4,27.2,7.8,3.1
+Queensland,2011,117.6,14.6,23.5,6.3,2.8
+Queensland,2012,102.5,15.3,21.2,5.6,2.6
+Queensland,2013,148.8,13.1,27.8,8.0,3.2
+Queensland,2014,121.4,14.4,24.5,6.8,2.9
+Queensland,2015,98.1,15.2,21.0,5.3,2.5
+Queensland,2016,138.7,13.5,26.9,7.5,3.1
+Queensland,2017,110.9,14.8,23.1,6.1,2.7
+Queensland,2018,93.3,15.6,20.3,5.0,2.5
+Queensland,2019,145.3,13.2,27.5,7.9,3.2
+Queensland,2020,150.7,13.0,28.0,8.2,3.3
+Queensland,2021,120.2,14.5,24.0,6.6,2.8
+Queensland,2022,132.5,13.9,26.0,7.2,3.0
+Queensland,2023,108.0,15.0,22.0,5.9,2.7
+South Australia,2004,13.9,8.3,5.6,2.8,0.8
+South Australia,2005,16.2,7.9,6.2,3.4,1.0
+South Australia,2006,11.8,8.8,5.0,2.3,0.7
+South Australia,2007,18.1,7.4,6.7,3.9,1.1
+South Australia,2008,14.7,8.1,5.8,3.0,0.9
+South Australia,2009,12.9,8.5,5.3,2.6,0.8
+South Australia,2010,19.5,7.2,6.9,4.2,1.2
+South Australia,2011,15.6,8.0,6.0,3.2,0.9
+South Australia,2012,13.4,8.4,5.5,2.7,0.8
+South Australia,2013,20.3,7.0,7.0,4.4,1.2
+South Australia,2014,16.5,7.8,6.1,3.5,0.9
+South Australia,2015,12.1,8.7,5.1,2.5,0.7
+South Australia,2016,19.0,7.3,6.8,4.1,1.1
+South Australia,2017,14.8,8.2,5.8,3.0,0.9
+South Australia,2018,13.0,8.5,5.4,2.6,0.8
+South Australia,2019,18.7,7.3,6.7,4.0,1.1
+South Australia,2020,20.1,7.1,6.9,4.3,1.2
+South Australia,2021,15.3,8.1,5.9,3.1,0.9
+South Australia,2022,16.9,7.7,6.3,3.6,0.9
+South Australia,2023,14.1,8.3,5.6,2.9,0.8
+Tasmania,2004,3.1,12.3,2.4,1.4,0.4
+Tasmania,2005,3.9,12.0,2.8,1.7,0.5
+Tasmania,2006,2.7,12.5,2.2,1.2,0.3
+Tasmania,2007,4.8,11.7,3.0,1.9,0.5
+Tasmania,2008,3.5,12.2,2.5,1.5,0.4
+Tasmania,2009,2.9,12.4,2.3,1.3,0.4
+Tasmania,2010,5.0,11.6,3.1,2.0,0.5
+Tasmania,2011,3.8,12.1,2.6,1.6,0.4
+Tasmania,2012,3.2,12.3,2.4,1.4,0.4
+Tasmania,2013,5.2,11.5,3.2,2.1,0.5
+Tasmania,2014,3.9,12.0,2.7,1.7,0.4
+Tasmania,2015,2.8,12.4,2.3,1.3,0.3
+Tasmania,2016,4.9,11.7,3.1,2.0,0.5
+Tasmania,2017,3.6,12.2,2.5,1.5,0.4
+Tasmania,2018,3.0,12.4,2.3,1.3,0.3
+Tasmania,2019,5.1,11.6,3.1,2.0,0.5
+Tasmania,2020,5.3,11.5,3.2,2.1,0.5
+Tasmania,2021,3.8,12.1,2.6,1.6,0.4
+Tasmania,2022,4.4,11.8,2.8,1.8,0.5
+Tasmania,2023,3.7,12.2,2.5,1.5,0.4
+Victoria,2004,75.2,14.9,14.8,3.5,3.1
+Victoria,2005,81.0,14.5,15.5,4.2,3.3
+Victoria,2006,69.8,15.4,14.2,3.0,3.0
+Victoria,2007,92.3,13.9,15.6,4.8,3.5
+Victoria,2008,85.6,14.2,15.0,4.1,3.2
+Victoria,2009,73.4,15.2,14.6,3.3,3.1
+Victoria,2010,96.2,13.8,15.8,4.9,3.5
+Victoria,2011,83.9,14.5,15.1,4.0,3.3
+Victoria,2012,78.1,14.8,14.9,3.7,3.2
+Victoria,2013,101.4,13.6,15.9,5.1,3.6
+Victoria,2014,87.5,14.3,15.2,4.4,3.4
+Victoria,2015,72.8,15.2,14.4,3.2,3.0
+Victoria,2016,95.1,13.9,15.7,4.8,3.5
+Victoria,2017,81.7,14.6,15.0,3.9,3.2
+Victoria,2018,76.4,14.9,14.7,3.5,3.1
+Victoria,2019,89.9,14.2,15.3,4.3,3.3
+Victoria,2020,102.2,13.5,15.9,5.2,3.6
+Victoria,2021,79.0,14.7,15.0,3.8,3.2
+Victoria,2022,91.4,14.0,15.4,4.5,3.4
+Victoria,2023,84.3,14.3,15.2,4.1,3.3
+Western Australia,2004,74.1,8.5,9.4,4.9,1.8
+Western Australia,2005,82.3,8.2,10.3,5.8,2.0
+Western Australia,2006,70.2,8.9,8.7,4.3,1.7
+Western Australia,2007,90.5,7.8,10.9,6.3,2.1
+Western Australia,2008,78.8,8.4,9.7,5.2,1.9
+Western Australia,2009,73.1,8.7,9.1,4.7,1.8
+Western Australia,2010,94.2,7.6,11.0,6.6,2.2
+Western Australia,2011,80.6,8.3,9.8,5.4,1.9
+Western Australia,2012,75.3,8.6,9.2,4.8,1.8
+Western Australia,2013,99.8,7.5,11.2,6.9,2.2
+Western Australia,2014,84.1,8.2,9.9,5.6,1.9
+Western Australia,2015,72.5,8.8,8.8,4.5,1.7
+Western Australia,2016,92.7,7.7,11.0,6.4,2.2
+Western Australia,2017,78.9,8.4,9.6,5.1,1.9
+Western Australia,2018,74.8,8.6,9.3,4.7,1.8
+

@@ -1,0 +1,4539 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tricia De Rose | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #07192c;
+  --teal: #9bd9d7;
+  --white: #f5f7fa;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "DM Sans", Arial, sans-serif;
+  background: var(--navy);
+  color: var(--white);
+}
+
+/* TOP NAVIGATION */
+nav {
+  background: #fff;
+  color: #17263b;
+  padding: 13px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: #17263b;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* HOMEPAGE */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 44px 7% 24px;
+  background:
+    radial-gradient(ellipse at 95% 20%, #204357 0%, transparent 38%),
+    linear-gradient(120deg, #071527, #0b2438);
+}
+
+.hero-main {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.55fr 0.85fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.eyebrow {
+  color: var(--teal);
+  letter-spacing: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(38px, 4.4vw, 65px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -1px;
+  margin: 0 0 20px;
+}
+
+h1 span { color: var(--teal); }
+
+.intro {
+  max-width: 620px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #d7e0e8;
+}
+
+.intro p { margin: 0 0 10px; }
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 22px;
+}
+
+.tags span {
+  padding: 6px 12px;
+  border: 1px solid #476276;
+  border-radius: 30px;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.btn-primary {
+  background: var(--teal);
+  color: var(--navy);
+}
+
+.btn-outline {
+  border: 1px solid #668298;
+  color: #fff;
+}
+
+/* PORTRAIT */
+.portrait {
+  width: 100%;
+  max-width: 350px;
+  height: 390px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  margin: auto;
+}
+
+/* CONTACT STRIP */
+.contact {
+  max-width: 1200px;
+  margin: 26px auto 0;
+  padding-top: 17px;
+  border-top: 1px solid #345064;
+}
+
+.contact h2 {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--teal);
+  margin: 0 0 12px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px 24px;
+}
+
+.contact-item {
+  font-size: 12px;
+  color: #d8e5ec;
+  overflow-wrap: anywhere;
+}
+
+.contact-item strong { color: #fff; }
+
+.contact-item a {
+  color: #d8e5ec;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  color: var(--teal);
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  nav { flex-direction: column; }
+  .nav-links { justify-content: center; gap: 12px; }
+  .hero { padding: 30px 6% 24px; }
+  .hero-main { grid-template-columns: 1fr; gap: 24px; }
+  .portrait { height: 330px; width: auto; }
+  .contact-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">TRICIA DE ROSE</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#business-intelligence">Business Intelligence</a>
+    <a href="#projects">Beyond Dashboards</a>
+    <a href="resume.pdf" target="_blank">Resume</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+
+  <div class="hero-main">
+
+    <div>
+      <div class="eyebrow">TRICIA DE ROSE</div>
+
+      <h1>
+        Turning Data into Insight.<br>
+        <span>Insight into Impact.</span>
+      </h1>
+
+      <div class="intro">
+        <p>
+          I'm Tricia De Rose, a Monash University Bachelor of
+          Commerce graduate with a background in Data Analytics,
+          Finance and Economics.
+        </p>
+
+        <p>
+          My experience spans business intelligence, financial
+          analysis, predictive modelling and strategic consulting.
+          I bring together analytical thinking, technical expertise
+          and commercial understanding to uncover meaningful
+          insights, solve complex problems and support informed
+          decision-making.
+        </p>
+
+        <p>
+          Driven by curiosity and continuous learning, I'm passionate
+          about applying data and strategic thinking to create value
+          across industries, organisations and emerging business
+          challenges.
+        </p>
+      </div>
+
+      <div class="tags">
+        <span>DATA ANALYTICS</span>
+        <span>FINANCE</span>
+        <span>ECONOMICS</span>
+        <span>BUSINESS INTELLIGENCE</span>
+        <span>STRATEGY</span>
+      </div>
+
+      <div class="buttons">
+        <a href="#business-intelligence"
+           class="btn btn-primary">
+          Explore My Work →
+        </a>
+
+        <a href="resume.pdf"
+           class="btn btn-outline"
+           target="_blank">
+          View Resume
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <img
+        src="Images/TRICIA (2).png"
+        alt="Tricia De Rose"
+        class="portrait">
+    </div>
+
+  </div>
+
+  <div class="contact" id="contact">
+
+    <h2>CONNECT WITH ME</h2>
+
+    <div class="contact-grid">
+
+      <div class="contact-item">
+        <strong>Email:</strong>
+        <a href="mailto:flotriciaderose@gmail.com">
+          flotriciaderose@gmail.com
+        </a>
+      </div>
+
+      <div class="contact-item">
+        <strong>Phone:</strong>
+        <a href="tel:+61416034777">
+          +61 416 034 777
+        </a>
+      </div>
+
+      <div class="contact-item">
+        <strong>LinkedIn:</strong>
+        <a href="https://www.linkedin.com/in/tricia-de-rose/"
+           target="_blank">
+          tricia-de-rose
+        </a>
+      </div>
+
+      <div class="contact-item">
+        <strong>Instagram:</strong>
+        <a href="https://www.instagram.com/tricia_de_rose_/"
+           target="_blank">
+          @tricia_de_rose_
+        </a>
+      </div>
+
+      <div class="contact-item">
+        <strong>Facebook:</strong>
+        <a href="https://www.facebook.com/triciaderose2004"
+           target="_blank">
+          triciaderose2004
+        </a>
+      </div>
+
+      <div class="contact-item">
+        <strong>Location:</strong>
+        Melbourne, Australia
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+<style>
+/* ==========================================
+   SECTION 01 — ABOUT ME
+   ========================================== */
+
+#about {
+  --navy: #102a40;
+  --teal: #07899a;
+  --muted: #52677b;
+  --border: #dce7eb;
+
+  background: #f2f7f8;
+  color: var(--navy);
+  padding: 42px 0 52px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#about,
+#about * {
+  box-sizing: border-box;
+}
+
+#about .about-container {
+  width: min(1320px, calc(100% - 56px));
+  margin: 0 auto;
+}
+
+#about .eyebrow {
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#about h2,
+#about h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+/* ==========================================
+   INTRODUCTION
+   ========================================== */
+
+#about .about-intro {
+  width: 100%;
+  margin: 20px 0 32px;
+}
+
+#about .about-title {
+  font-size: clamp(35px, 3.6vw, 49px);
+  line-height: 1.13;
+  letter-spacing: -0.8px;
+  margin: 0 0 24px;
+}
+
+#about .about-text-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+#about .about-text-left,
+#about .about-text-right {
+  min-width: 0;
+}
+
+#about .about-text-grid p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--muted);
+  margin: 0 0 13px;
+}
+
+#about .about-text-grid p:last-child {
+  margin-bottom: 0;
+}
+
+#about .about-text-right {
+  border-left: 3px solid var(--teal);
+  padding-left: 25px;
+}
+
+/* ==========================================
+   BACKGROUND HEADING
+   ========================================== */
+
+#about .background-title {
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 0 0 19px;
+}
+
+/* ==========================================
+   THREE-COLUMN CARDS
+   ========================================== */
+
+
+/* =========================================
+   MY BACKGROUND AT A GLANCE — ALIGNMENT FIX
+   Does not affect the About Me introduction
+   ========================================= */
+
+#about .about-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+/* All three cards have matching dimensions */
+#about .about-card {
+  min-width: 0;
+  padding: 23px;
+  border: 1px solid #dce7eb;
+  border-radius: 12px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(16, 42, 64, 0.035);
+}
+
+/* Preserve pale-blue experience card */
+#about .experience-card {
+  background: #e8f2f5;
+}
+
+/* Align the numbered labels */
+#about .about-card > .eyebrow {
+  min-height: 38px;
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* Give all card titles the same space */
+#about .about-card h3 {
+  font-family: Georgia, serif;
+  font-size: clamp(22px, 2vw, 27px);
+  font-weight: 700;
+  line-height: 1.16;
+  min-height: 64px;
+  margin: 0;
+  color: #102a40;
+}
+
+/* Matching teal underline position */
+#about .card-accent {
+  width: 38px;
+  height: 3px;
+  flex-shrink: 0;
+  background: #07899a;
+  border-radius: 3px;
+  margin: 0 0 17px;
+}
+
+/* Consistent paragraph formatting */
+#about .about-card p {
+  font-size: 12px;
+  line-height: 1.65;
+  color: #52677b;
+  margin: 0 0 12px;
+}
+
+#about .about-card strong {
+  color: #102a40;
+}
+
+/* Experience roles */
+#about .jobs {
+  display: grid;
+  gap: 11px;
+}
+
+#about .job strong {
+  display: block;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+#about .job span {
+  display: block;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #52677b;
+  margin-top: 2px;
+}
+
+/* Swimming statistics */
+#about .swim-stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  margin: 6px 0 0;
+}
+
+#about .swim-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+#about .swim-stat b {
+  color: #07899a;
+  font-size: 26px;
+  line-height: 1;
+}
+
+#about .swim-stat span {
+  color: #52677b;
+  font-size: 11px;
+}
+
+/* All three photographs start at the same height */
+#about .graduation-figure,
+#about .experience-figure,
+#about .swimming-figure {
+  margin: auto 0 0;
+  padding-top: 18px;
+  width: 100%;
+}
+
+/* Equal-sized image frames, no grey pockets */
+#about .graduation-figure .image-frame,
+#about .experience-figure .image-frame,
+#about .swimming-figure .image-frame {
+  width: 100%;
+  height: 255px;
+  overflow: hidden;
+  border-radius: 7px;
+  background: transparent;
+}
+
+/* Images fill their frames */
+#about .graduation-figure img,
+#about .experience-figure img,
+#about .swimming-figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Keep the combined graduation image fully visible */
+#about .graduation-figure img {
+  object-fit: contain;
+}
+
+/* Captions */
+#about .about-card figcaption {
+  font-size: 10px;
+  line-height: 1.4;
+  color: #61788a;
+  margin-top: 7px;
+}
+
+/* Links */
+#about .swim-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+#about .swim-links a {
+  font-size: 11px;
+  font-weight: 700;
+  color: #07899a;
+  text-decoration: none;
+}
+
+/* Responsive layout */
+@media (max-width: 1050px) {
+  #about .about-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #about .leadership-card {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 700px) {
+  #about .about-cards {
+    grid-template-columns: 1fr;
+  }
+
+  #about .leadership-card {
+    grid-column: auto;
+  }
+
+  #about .about-card {
+    padding: 19px;
+  }
+
+  #about .about-card h3 {
+    min-height: 0;
+    margin-bottom: 12px;
+  }
+
+  #about .about-card > .eyebrow {
+    min-height: 0;
+    margin-bottom: 15px;
+  }
+
+  #about .graduation-figure .image-frame,
+  #about .experience-figure .image-frame,
+  #about .swimming-figure .image-frame {
+    height: 240px;
+  }
+}
+
+
+/* ==========================================
+   IMAGES — NO GREY POCKETS
+   ========================================== */
+
+#about figure {
+  margin: 0;
+  min-width: 0;
+}
+
+#about .image-frame {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  background: transparent;
+}
+
+#about .image-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+#about figcaption {
+  font-size: 10px;
+  line-height: 1.4;
+  color: #61788a;
+  margin-top: 7px;
+}
+
+/* Combined graduation image */
+#about .graduation-figure {
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+#about .graduation-figure img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Sofitel image */
+#about .experience-figure {
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+#about .experience-figure img {
+  width: 100%;
+  height: auto;
+}
+
+/* Swimming image */
+#about .swimming-figure {
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+#about .swimming-figure img {
+  width: 100%;
+  height: auto;
+}
+
+/* ==========================================
+   EXPERIENCE DETAILS
+   ========================================== */
+
+#about .jobs {
+  display: grid;
+  gap: 11px;
+}
+
+#about .job strong {
+  display: block;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+#about .job span {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 2px;
+  line-height: 1.45;
+}
+
+/* ==========================================
+   SWIMMING ACHIEVEMENTS
+   ========================================== */
+
+#about .swim-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin: 11px 0 0;
+}
+
+#about .swim-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+#about .swim-stat b {
+  font-size: 27px;
+  line-height: 1;
+  color: var(--teal);
+}
+
+#about .swim-stat span {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* ==========================================
+   LINKS
+   ========================================== */
+
+#about .swim-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 15px;
+  margin-top: 13px;
+}
+
+#about .swim-links a {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--teal);
+  text-decoration: none;
+}
+
+#about .swim-links a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 1050px) {
+  #about .about-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #about .leadership-card {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 700px) {
+  #about {
+    padding: 32px 0 40px;
+  }
+
+  #about .about-container {
+    width: calc(100% - 28px);
+  }
+
+  #about .about-title {
+    font-size: 34px;
+    margin-bottom: 19px;
+  }
+
+  #about .about-text-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  #about .about-text-right {
+    padding-left: 17px;
+  }
+
+  #about .about-cards {
+    grid-template-columns: 1fr;
+  }
+
+  #about .leadership-card {
+    grid-column: auto;
+  }
+
+  #about .about-card {
+    padding: 18px;
+  }
+
+  #about .background-title {
+    font-size: 26px;
+  }
+}
+
+
+
+
+
+/* ==========================================
+   SECTION 01 — PREMIUM COLOUR REDESIGN
+   Preserves existing content, card layout
+   and image alignment
+   ========================================== */
+
+#about {
+  --navy: #102a40;
+  --teal: #087f91;
+  --muted: #4b6579;
+
+  background:
+    radial-gradient(
+      ellipse at 92% 4%,
+      rgba(155, 217, 215, .32),
+      transparent 38%
+    ),
+    linear-gradient(
+      160deg,
+      #f0f7f8 0%,
+      #f7f8f6 54%,
+      #edf4f6 100%
+    );
+
+  padding: 60px 0 72px;
+}
+
+/* SECTION LABEL */
+
+#about .about-container > .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #087f91;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+#about .about-container > .eyebrow::before {
+  content: "";
+  width: 27px;
+  height: 2px;
+  background: #087f91;
+}
+
+/* ==========================================
+   INTRODUCTION — EDITORIAL DESIGN
+   ========================================== */
+
+#about .about-intro {
+  position: relative;
+  margin: 22px 0 42px;
+  padding: 35px 40px 38px;
+
+  background:
+    linear-gradient(
+      125deg,
+      rgba(255,255,255,.96),
+      rgba(235,247,248,.92)
+    );
+
+  border: 1px solid #dce9ec;
+  border-radius: 16px;
+
+  box-shadow:
+    0 12px 38px rgba(16,42,64,.045);
+
+  overflow: hidden;
+}
+
+/* Decorative top line */
+
+#about .about-intro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 185px;
+  height: 4px;
+
+  background: linear-gradient(
+    90deg,
+    #087f91,
+    #9bd9d7,
+    #e5c7a4
+  );
+}
+
+/* Soft decorative circle */
+
+#about .about-intro::after {
+  content: "";
+  position: absolute;
+  right: -75px;
+  top: -110px;
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  background: rgba(155,217,215,.13);
+  pointer-events: none;
+}
+
+#about .about-title {
+  position: relative;
+  z-index: 1;
+
+  max-width: 1050px;
+  margin: 0 0 28px;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(34px, 3.8vw, 51px);
+  line-height: 1.16;
+  letter-spacing: -1px;
+  font-weight: 500;
+  color: #102a40;
+}
+
+/* Balanced two-column text */
+
+#about .about-text-grid {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  gap: 52px;
+  align-items: start;
+}
+
+#about .about-text-grid p {
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.85;
+  color: #4b6579;
+  margin: 0 0 15px;
+}
+
+/* Highlighted right column */
+
+#about .about-text-right {
+  border-left: 3px solid #087f91;
+  padding: 4px 0 4px 25px;
+  background: transparent;
+}
+
+/* ==========================================
+   BACKGROUND SECTION HEADING
+   ========================================== */
+
+#about .background-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(28px, 3vw, 36px);
+  font-weight: 500;
+  letter-spacing: -.5px;
+  margin: 0 0 24px;
+  color: #102a40;
+}
+
+/* ==========================================
+   CARDS — COLOUR ONLY
+   Existing layout and photos remain intact
+   ========================================== */
+
+#about .education-card {
+  background: #ffffff;
+  border-color: #dce7eb;
+}
+
+#about .experience-card {
+  background: #e5f1f4;
+  border-color: #d2e5e9;
+}
+
+#about .leadership-card {
+  background: #fbf5ed;
+  border-color: #eadfce;
+}
+
+/* Consistent, subtle shadows */
+
+#about .about-card {
+  box-shadow:
+    0 7px 26px rgba(16,42,64,.055);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+#about .about-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 15px 35px rgba(16,42,64,.10);
+}
+
+/* Stronger card titles */
+
+#about .about-card h3 {
+  color: #102a40;
+  font-weight: 700;
+}
+
+/* Distinct accent underlines */
+
+#about .education-card .card-accent {
+  background: #087f91;
+}
+
+#about .experience-card .card-accent {
+  background: #468e9c;
+}
+
+#about .leadership-card .card-accent {
+  background: #b18a59;
+}
+
+/* More readable details */
+
+#about .about-card p,
+#about .job span {
+  color: #4b6579;
+}
+
+#about .about-card .eyebrow {
+  color: #087f91;
+}
+
+/* Keep achievement numbers prominent */
+
+#about .swim-stat b {
+  color: #087f91;
+}
+
+/* Photo polish without changing their size */
+
+#about .about-card .image-frame {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#about .about-card figcaption {
+  color: #60788a;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 900px) {
+  #about .about-intro {
+    padding: 28px;
+  }
+
+  #about .about-text-grid {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 700px) {
+  #about {
+    padding: 38px 0 48px;
+  }
+
+  #about .about-intro {
+    padding: 25px 20px;
+    margin-bottom: 30px;
+  }
+
+  #about .about-title {
+    font-size: clamp(31px, 7vw, 39px);
+    margin-bottom: 22px;
+  }
+
+  #about .about-text-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  #about .about-text-right {
+    padding-left: 18px;
+  }
+
+  #about .about-text-grid p {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #about .about-card {
+    transition: none;
+  }
+
+  #about .about-card:hover {
+    transform: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+</style>
+
+
+<!-- ==========================================
+     SECTION 01 — ABOUT ME
+     ========================================== -->
+
+<section id="about">
+
+  <div class="about-container">
+
+    <div class="eyebrow">01 / ABOUT ME</div>
+
+    <!-- INTRODUCTION -->
+
+    <div class="about-intro">
+
+      <h2 class="about-title">
+        A Multidisciplinary Perspective.<br>
+        An Analytical Mindset.
+      </h2>
+
+      <div class="about-text-grid">
+
+        <div class="about-text-left">
+
+          <p>
+            I am a Monash University Bachelor of Commerce
+            graduate with a background spanning data
+            analytics, finance and economics. My professional
+            and academic experiences have shaped my ability
+            to approach business challenges from multiple
+            perspectives, combining quantitative analysis
+            with financial understanding and strategic
+            thinking.
+          </p>
+
+          <p>
+            Through my experience in business intelligence,
+            financial reporting and consulting, I have worked
+            with complex information to evaluate organisational
+            performance, identify patterns and communicate
+            insights that support decision-making.
+          </p>
+
+        </div>
+
+        <div class="about-text-right">
+
+          <p>
+            My academic projects have strengthened my
+            capabilities in machine learning, statistical
+            modelling, database development and
+            data visualisation.
+          </p>
+
+          <p>
+            Beyond academics and professional experience,
+            representing Sri Lanka internationally as a
+            national swimming team athlete has strengthened
+            my discipline, resilience, leadership and
+            adaptability over 14 years of competitive swimming.
+          </p>
+
+          <p>
+            I am motivated by continuous learning,
+            solving meaningful problems and translating
+            complex information into actionable
+            business insights.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- BACKGROUND AT A GLANCE -->
+
+    <h2 class="background-title">
+      My Background at a Glance
+    </h2>
+
+    <div class="about-cards">
+
+
+      <!-- 01 / EDUCATION -->
+
+      <article class="about-card education-card">
+
+        <div class="eyebrow">
+          01 / EDUCATION
+        </div>
+
+        <h3>Monash University</h3>
+
+        <div class="card-accent"></div>
+
+        <p>
+          <strong>Bachelor of Commerce</strong><br>
+          Major: Data Analytics<br>
+          Minors: Finance &amp; Economics<br>
+          Melbourne, Australia · 2026
+        </p>
+
+        <figure class="graduation-figure">
+
+          <div class="image-frame">
+            <img
+              src="Images/graduation-combined.png"
+              alt="Monash University graduation portrait and ceremony"
+              loading="lazy">
+          </div>
+
+          <figcaption>
+            Monash University Graduation · 2026
+          </figcaption>
+
+        </figure>
+
+      </article>
+
+
+      <!-- 02 / PROFESSIONAL EXPERIENCE -->
+
+      <article class="about-card experience-card">
+
+        <div class="eyebrow">
+          02 / PROFESSIONAL EXPERIENCE
+        </div>
+
+        <h3>Across Business &amp; Analytics</h3>
+
+        <div class="card-accent"></div>
+
+        <div class="jobs">
+
+          <div class="job">
+            <strong>VS Information Systems</strong>
+            <span>Data Analyst Intern</span>
+          </div>
+
+          <div class="job">
+            <strong>Sofitel Melbourne on Collins</strong>
+            <span>University Consulting Project</span>
+          </div>
+
+          <div class="job">
+            <strong>Herald Enterprises</strong>
+            <span>Accounts Assistant / Finance Analyst</span>
+          </div>
+
+          <div class="job">
+            <strong>Tele Energy Pty Ltd</strong>
+            <span>Trainee Administration Officer</span>
+          </div>
+
+        </div>
+
+        <figure class="experience-figure">
+
+          <div class="image-frame">
+            <img
+              src="Images/sofitel-team.png"
+              alt="Sofitel Melbourne consulting engagement"
+              loading="lazy">
+          </div>
+
+          <figcaption>
+            Sofitel Melbourne · Consulting Engagement
+          </figcaption>
+
+        </figure>
+
+      </article>
+
+
+      <!-- 03 / LEADERSHIP & ACHIEVEMENT -->
+
+      <article class="about-card leadership-card">
+
+        <div class="eyebrow">
+          03 / LEADERSHIP &amp; ACHIEVEMENT
+        </div>
+
+        <h3>Beyond the Classroom</h3>
+
+        <div class="card-accent"></div>
+
+        <p>
+          Former Sri Lanka National Swimming Team athlete
+          with international competitive experience,
+          national records and championship titles.
+        </p>
+
+        <p>
+          Competitive swimming has shaped my approach
+          to teamwork, leadership, resilience and
+          performing under pressure.
+        </p>
+
+        <div class="swim-stats">
+
+          <div class="swim-stat">
+            <b>14+</b>
+            <span>years competing</span>
+          </div>
+
+          <div class="swim-stat">
+            <b>4</b>
+            <span>national records</span>
+          </div>
+
+        </div>
+
+        <figure class="swimming-figure">
+
+          <div class="image-frame">
+            <img
+              src="Images/swim-team.jpeg"
+              alt="Sri Lanka National Swimming Team"
+              loading="lazy">
+          </div>
+
+          <figcaption>
+            Representing Sri Lanka in competitive swimming
+          </figcaption>
+
+        </figure>
+
+        <div class="swim-links">
+
+          <a
+            href="https://www.instagram.com/p/C29vuqRISmj/"
+            target="_blank"
+            rel="noopener noreferrer">
+            National Team Feature ↗
+          </a>
+
+          <a
+            href="https://sundaytimes.pressreader.com/article/281809993468451"
+            target="_blank"
+            rel="noopener noreferrer">
+            Newspaper Recognition ↗
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ==========================================
+ SECTION 02 — BUSINESS INTELLIGENCE
+ & FINANCIAL ANALYTICS
+========================================== -->
+
+<style>
+#business-intelligence {
+  --bi-navy: #102a40;
+  --bi-dark: #07192c;
+  --bi-teal: #087f91;
+  --bi-aqua: #9bd9d7;
+  --bi-coral: #d68c79;
+  --bi-gold: #c7a36a;
+  --bi-text: #50677b;
+  --bi-border: #dce7eb;
+
+  background: #f3f7fa;
+  color: var(--bi-navy);
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+#business-intelligence,
+#business-intelligence * {
+  box-sizing: border-box;
+}
+
+#business-intelligence .bi-wrap {
+  width: min(1320px, calc(100% - 56px));
+  margin: 0 auto;
+}
+
+#business-intelligence h2,
+#business-intelligence h3,
+#business-intelligence .bi-gallery-head h4 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -.5px;
+}
+
+#business-intelligence .bi-label {
+  color: var(--bi-teal);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#business-intelligence .bi-mini-heading {
+  color: var(--bi-teal);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin: 0 0 7px;
+}
+
+/* ==========================================
+   FULL-WIDTH NAVY HERO
+========================================== */
+
+#business-intelligence .bi-hero {
+  background:
+    radial-gradient(
+      ellipse at 90% 10%,
+      rgba(56,130,139,.42),
+      transparent 48%
+    ),
+    linear-gradient(
+      115deg,
+      #07192c 0%,
+      #102a40 55%,
+      #173e4b 100%
+    );
+  color: #fff;
+  padding: 58px 0 60px;
+}
+
+#business-intelligence .bi-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 65px;
+  align-items: center;
+}
+
+#business-intelligence .bi-hero .bi-label {
+  color: #81d6db;
+}
+
+#business-intelligence .bi-hero h2 {
+  color: #fff;
+  font-size: clamp(38px, 4vw, 55px);
+  line-height: 1.13;
+  margin: 20px 0 17px;
+}
+
+#business-intelligence .bi-hero h2 span {
+  color: var(--bi-aqua);
+}
+
+#business-intelligence .bi-hero p {
+  color: #d8e9ed;
+  font-size: 13px;
+  line-height: 1.85;
+  margin: 0;
+}
+
+#business-intelligence .bi-hero-aside {
+  border-left: 2px solid var(--bi-aqua);
+  padding-left: 28px;
+}
+
+#business-intelligence .bi-hero-aside strong {
+  display: block;
+  color: var(--bi-aqua);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+#business-intelligence .bi-focus {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+#business-intelligence .bi-focus span {
+  padding: 8px 12px;
+  border: 1px solid rgba(155,217,215,.28);
+  background: rgba(255,255,255,.06);
+  border-radius: 25px;
+  color: #e5f5f5;
+  font-size: 10px;
+}
+
+/* ==========================================
+   CASE STUDIES
+========================================== */
+
+#business-intelligence .bi-case {
+  padding: 30px 0 33px;
+  border-bottom: 1px solid var(--bi-border);
+}
+
+#business-intelligence .bi-case.smile {
+  background: linear-gradient(
+    150deg,
+    #f8fbfc,
+    #edf7f5
+  );
+}
+
+#business-intelligence .bi-case.altria {
+  background: linear-gradient(
+    150deg,
+    #edf3fa,
+    #f8f5ef
+  );
+}
+
+#business-intelligence .bi-case-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+#business-intelligence .bi-case h3 {
+  color: var(--bi-navy);
+  font-size: clamp(26px, 2.8vw, 35px);
+  line-height: 1.2;
+  margin: 9px 0 7px;
+}
+
+#business-intelligence .bi-case-subtitle {
+  color: var(--bi-teal);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+#business-intelligence .bi-case-overview {
+  border-left: 3px solid var(--bi-teal);
+  padding-left: 19px;
+}
+
+#business-intelligence .bi-case-overview p {
+  color: var(--bi-text);
+  font-size: 12px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ==========================================
+   KPI CARDS
+========================================== */
+
+#business-intelligence .bi-kpis {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 11px;
+  margin: 0 0 19px;
+}
+
+#business-intelligence .bi-kpi {
+  background: #e8f5f3;
+  border: 1px solid #d5e9e4;
+  border-top: 3px solid var(--bi-teal);
+  border-radius: 9px;
+  padding: 16px 19px;
+}
+
+#business-intelligence .bi-kpi:nth-child(2) {
+  background: #fff0ea;
+  border-color: #f1ded5;
+  border-top-color: var(--bi-coral);
+}
+
+#business-intelligence .bi-kpi:nth-child(3) {
+  background: #faf2e3;
+  border-color: #ecdfc8;
+  border-top-color: var(--bi-gold);
+}
+
+#business-intelligence .bi-kpi strong {
+  display: block;
+  color: var(--bi-navy);
+  font-size: clamp(27px, 3vw, 37px);
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+#business-intelligence .bi-kpi span {
+  display: block;
+  color: var(--bi-text);
+  font-size: 11px;
+  line-height: 1.45;
+  margin-top: 5px;
+}
+
+#business-intelligence .bi-kpi small {
+  display: block;
+  color: var(--bi-teal);
+  font-size: 10px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+/* ==========================================
+   FOUR ANALYSIS CARDS
+========================================== */
+
+#business-intelligence .bi-analysis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 11px;
+  margin: 9px 0 18px;
+}
+
+#business-intelligence .bi-analysis-item {
+  background: #edf4f7;
+  border: 1px solid #dce8ed;
+  border-radius: 9px;
+  padding: 15px 16px;
+}
+
+#business-intelligence .bi-analysis-item:nth-child(2) {
+  background: #e8f5f1;
+  border-color: #d7e9e2;
+}
+
+#business-intelligence .bi-analysis-item:nth-child(3) {
+  background: #fcf1e9;
+  border-color: #f0e2d6;
+}
+
+#business-intelligence .bi-analysis-item:nth-child(4) {
+  background: #f0edfa;
+  border-color: #e5def2;
+}
+
+#business-intelligence .bi-analysis-num {
+  color: var(--bi-teal);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+#business-intelligence .bi-analysis-item h4 {
+  font-family: "DM Sans", Arial, sans-serif;
+  color: var(--bi-navy);
+  font-size: 12px;
+  line-height: 1.4;
+  margin: 8px 0 5px;
+}
+
+#business-intelligence .bi-analysis-item p {
+  color: var(--bi-text);
+  font-size: 11px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==========================================
+   DASHBOARD GALLERY — FOUR IN ONE ROW
+========================================== */
+
+#business-intelligence .bi-gallery-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0 10px;
+}
+
+#business-intelligence .bi-gallery-head h4 {
+  color: var(--bi-navy);
+  font-size: 21px;
+  margin: 0;
+}
+
+#business-intelligence .bi-gallery-head span {
+  color: var(--bi-text);
+  font-size: 10px;
+}
+
+#business-intelligence .bi-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 10px;
+}
+
+#business-intelligence .bi-shot {
+  min-width: 0;
+  margin: 0;
+  background: #fff;
+  border: 1px solid var(--bi-border);
+  border-radius: 9px;
+  overflow: hidden;
+  transition: transform .2s ease;
+}
+
+#business-intelligence .bi-shot:hover {
+  transform: translateY(-3px);
+}
+
+#business-intelligence .bi-shot a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 175px;
+  background: #eaf2f5;
+  overflow: hidden;
+}
+
+#business-intelligence .bi-shot:nth-child(2) a {
+  background: #e7f4f3;
+}
+
+#business-intelligence .bi-shot:nth-child(3) a {
+  background: #f8efeb;
+}
+
+#business-intelligence .bi-shot:nth-child(4) a {
+  background: #edf0f8;
+}
+
+#business-intelligence .bi-shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+#business-intelligence .bi-shot figcaption {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 8px 10px;
+  border-top: 1px solid var(--bi-border);
+  color: var(--bi-navy);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* ==========================================
+   BUSINESS VALUE & PDF LINKS
+========================================== */
+
+#business-intelligence .bi-value {
+  margin-top: 14px;
+  padding: 13px 17px;
+  border-left: 3px solid var(--bi-teal);
+  border-radius: 0 8px 8px 0;
+  background: linear-gradient(
+    100deg,
+    #dff0ed,
+    #f3f9f8
+  );
+}
+
+#business-intelligence .altria .bi-value {
+  border-left-color: var(--bi-coral);
+  background: linear-gradient(
+    100deg,
+    #f8eae4,
+    #f8f6f1
+  );
+}
+
+#business-intelligence .bi-value p {
+  color: #38576a;
+  font-size: 11px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+#business-intelligence .bi-full-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 13px;
+  padding: 11px 17px;
+  border-radius: 25px;
+  background: var(--bi-navy);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .4px;
+  text-decoration: none;
+  transition: background .2s ease;
+}
+
+#business-intelligence .bi-full-link:hover {
+  background: var(--bi-teal);
+}
+
+/* ==========================================
+   TOOLS & CAPABILITIES
+========================================== */
+
+#business-intelligence .bi-tools {
+  padding: 23px 0 26px;
+  background: linear-gradient(
+    125deg,
+    #102a40,
+    #174454
+  );
+}
+
+#business-intelligence .bi-tools .bi-label {
+  color: var(--bi-aqua);
+}
+
+#business-intelligence .bi-tools h3 {
+  color: #fff;
+  font-size: 23px;
+  margin: 7px 0 13px;
+}
+
+#business-intelligence .bi-tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+#business-intelligence .bi-tools-list span {
+  background: rgba(255,255,255,.09);
+  border: 1px solid rgba(155,217,215,.35);
+  color: #f0f9fa;
+  padding: 7px 11px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1000px) {
+  #business-intelligence .bi-analysis,
+  #business-intelligence .bi-gallery {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+
+  #business-intelligence .bi-shot a {
+    height: 210px;
+  }
+}
+
+@media (max-width: 750px) {
+  #business-intelligence .bi-wrap {
+    width: calc(100% - 30px);
+  }
+
+  #business-intelligence .bi-hero {
+    padding: 43px 0;
+  }
+
+  #business-intelligence .bi-hero-grid,
+  #business-intelligence .bi-case-head {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  #business-intelligence .bi-case {
+    padding: 23px 0 26px;
+  }
+
+  #business-intelligence .bi-kpis {
+    grid-template-columns: 1fr;
+  }
+
+  #business-intelligence .bi-hero-aside {
+    padding-left: 17px;
+  }
+}
+
+@media (max-width: 550px) {
+  #business-intelligence .bi-analysis,
+  #business-intelligence .bi-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  #business-intelligence .bi-shot a {
+    height: 225px;
+  }
+
+  #business-intelligence .bi-gallery-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #business-intelligence .bi-shot,
+  #business-intelligence .bi-full-link {
+    transition: none;
+  }
+
+  #business-intelligence .bi-shot:hover {
+    transform: none;
+  }
+}
+</style>
+
+
+<section id="business-intelligence">
+
+  <!-- ======================================
+       FULL-WIDTH NAVY INTRODUCTION
+  ====================================== -->
+
+  <div class="bi-hero">
+    <div class="bi-wrap bi-hero-grid">
+
+      <div>
+        <div class="bi-label">
+          02 / BUSINESS INTELLIGENCE &amp;
+          FINANCIAL ANALYTICS
+        </div>
+
+        <h2>
+          Turning Financial Data<br>
+          into <span>Business Insights.</span>
+        </h2>
+
+        <p>
+          During my Data Analyst internship at VS Information
+          Systems, I worked with business intelligence and
+          financial reporting dashboards, analysing revenue,
+          profitability, project performance and financial
+          obligations.
+        </p>
+      </div>
+
+      <div class="bi-hero-aside">
+        <strong>My Analytical Approach</strong>
+
+        <p>
+          Interpreting financial information, evaluating
+          business performance and communicating insights
+          through Power BI reporting.
+        </p>
+
+        <div class="bi-focus">
+          <span>Revenue Analysis</span>
+          <span>Financial KPIs</span>
+          <span>Project Profitability</span>
+          <span>Working Capital</span>
+          <span>Power BI</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ======================================
+       CASE STUDY 01 — SMILE MEDIA
+  ====================================== -->
+
+  <div class="bi-case smile">
+    <div class="bi-wrap">
+
+      <div class="bi-case-head">
+
+        <div>
+          <div class="bi-label">
+            CASE STUDY 01 / SMILE MEDIA
+          </div>
+
+          <h3>
+            Revenue, Profitability &amp;<br>
+            Project Performance
+          </h3>
+
+          <div class="bi-case-subtitle">
+            Corporate Financial &amp; Operational Analytics
+          </div>
+        </div>
+
+        <div class="bi-case-overview">
+          <div class="bi-mini-heading">
+            Project Overview
+          </div>
+
+          <p>
+            Analysed financial and operational performance
+            through Power BI reporting, examining sales
+            trends, customer contributions, project
+            profitability and outstanding receivables.
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- SMILE MEDIA KPIs -->
+
+      <div class="bi-kpis">
+
+        <div class="bi-kpi">
+          <strong>6.91M</strong>
+          <span>Actual revenue in overall project analysis</span>
+          <small>As reported in dashboard</small>
+        </div>
+
+        <div class="bi-kpi">
+          <strong>12</strong>
+          <span>Projects included in overall project analysis</span>
+          <small>Project performance</small>
+        </div>
+
+        <div class="bi-kpi">
+          <strong>2.39M</strong>
+          <span>Outstanding debtor balance</span>
+          <small>January 2026 reporting</small>
+        </div>
+
+      </div>
+
+
+      <!-- ANALYSIS -->
+
+      <div class="bi-mini-heading">
+        Key Areas of Analysis
+      </div>
+
+      <div class="bi-analysis">
+
+        <div class="bi-analysis-item">
+          <div class="bi-analysis-num">01 /</div>
+          <h4>Revenue &amp; Sales</h4>
+          <p>
+            MTD/YTD revenue, customer contributions,
+            revenue categories and targets.
+          </p>
+        </div>
+
+        <div class="bi-analysis-item">
+          <div class="bi-analysis-num">02 /</div>
+          <h4>Project Performance</h4>
+          <p>
+            Project revenue, direct costs, gross
+            profit and actual versus estimated results.
+          </p>
+        </div>
+
+        <div class="bi-analysis-item">
+          <div class="bi-analysis-num">03 /</div>
+          <h4>Profitability</h4>
+          <p>
+            Gross profit trends and performance
+            across project categories.
+          </p>
+        </div>
+
+        <div class="bi-analysis-item">
+          <div class="bi-analysis-num">04 /</div>
+          <h4>Financial Obligations</h4>
+          <p>
+            Debtor and creditor balances,
+            invoices and ageing patterns.
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- SMILE MEDIA GALLERY -->
+
+      <div class="bi-gallery-head">
+        <h4>Dashboard Gallery</h4>
+        <span>Click a screenshot to view it full-size</span>
+      </div>
+
+      <div class="bi-gallery">
+
+        <figure class="bi-shot">
+          <a href="Images/smile-project.png"
+             target="_blank"
+             rel="noopener noreferrer">
+            <img
+              src="Images/smile-project.png"
+              alt="Smile Media overall project analysis"
+              loading="lazy">
+          </a>
+          <figcaption>
+            01 — Overall Project Analysis
+          </figcaption>
+        </figure>
+
+        <figure class="bi-shot">
+          <a href="Images/smile-sales.png"
+             target="_blank"
+             rel="noopener noreferrer">
+            <img
+              src="Images/smile-sales.png"
+              alt="Smile Media sales performance"
+              loading="lazy">
+          </a>
+          <figcaption>
+            02 — Sales Performance (YTD)
+          </figcaption>
+        </figure>
+
+        <figure class="bi-shot">
+          <a href="Images/smile-profit.png"
+             target="_blank"
+             rel="noopener noreferrer">
+            <img
+              src="Images/smile-profit.png"
+              alt="Smile Media gross profit analysis"
+              loading="lazy">
+          </a>
+          <figcaption>
+            03 — Gross Profit Analysis (MTD)
+          </figcaption>
+        </figure>
+
+        <figure class="bi-shot">
+          <a href="Images/smile-debtors.png"
+             target="_blank"
+             rel="noopener noreferrer">
+            <img
+              src="Images/smile-debtors.png"
+              alt="Smile Media debtor and creditor analysis"
+              loading="lazy">
+          </a>
+          <figcaption>
+            04 — Debtor &amp; Creditor Analysis
+          </figcaption>
+        </figure>
+
+      </div>
+
+
+      <!-- BUSINESS VALUE -->
+
+      <div class="bi-value">
+        <div class="bi-mini-heading">Business Value</div>
+        <p>
+          Improved visibility into revenue, project
+          profitability and outstanding payments,
+          supporting financial performance monitoring.
+        </p>
+      </div>
+
+      <a
+        class="bi-full-link"
+        href="https://drive.google.com/file/d/1vlV9MYrMndsBxeNqY2jrMaJdbab4O_rM/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer">
+        VIEW FULL SMILE MEDIA DASHBOARD ↗
+      </a>
+
+    </div>
+  </div>
+
+
+  <!-- ======================================
+       CASE STUDY 02 — ALTRIA
+  ====================================== -->
+
+  <div class="bi-case altria">
+    <div class="bi-wrap">
+
+      <div class="bi-case-head">
+
+        <div>
+          <div class="bi-label">
+            CASE STUDY 02 / ALTRIA
+          </div>
+
+          <h3>
+            Sales, Profitability &amp;<br>
+            Financial Performance
+          </h3>
+
+          <div class="bi-case-subtitle">
+            Corporate Financial Performance Analysis
+          </div>
+        </div>
+
+        <div class="bi-case-overview">
+          <div class="bi-mini-heading">
+            Project Overview
+          </div>
+
+          <p>
+            Worked with financial dashboards covering
+            revenue performance, profitability,
+            project-level results and creditor obligations.
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- ALTRIA KPIs -->
+
+      <div class="bi-kpis">
+
+        <div class="bi-kpi">
+          <strong>801.97M</strong>
+          <span>Year-to-date sales</span>
+          <small>March 2025</small>
+        </div>
+
+        <div class="bi-kpi">
+          <strong>240.79M</strong>
+          <span>Year-to-date gross profit</span>
+          <small>March 2025</small>
+        </div>
+
+        <div class="bi-kpi">
+          <strong>187.74M</strong>
+          <span>Outstanding creditor balance</span>
+          <small>May 2025</small>
+        </div>
+
+      </div>
+
+
+      <!-- ANALYSIS -->
+
+      <div class="bi-mini-heading">
+        Key Areas of Analysis
+      </div>
+
+      <div class="bi-analysis">
+
+        <div class="bi-analysis-item">
+          <div class="bi-analysis-num">01 /</div>
+          <h4>Sales Performance</h4>
+          <p>
+            YTD revenue, historical comparisons,
+            customer contributions and targets.
+          </p>
+        </div>
+
+        <div class="bi-analysis-item">
+          <div class="bi-analysis-num">02 /</div>
+          <h4>Profitability</h4>
+          <p>
+            Gross profit, cost categories
+            and financial trends.
+          </p>
+        </div>
+
+        <div class="bi-analysis-item">
+          <div class="bi-analysis-num">03 /</div>
+          <h4>Project Analysis</h4>
+          <p>
+            Project revenue, direct costs,
+            gross profit and transactions.
+          </p>
+        </div>
+
+        <div class="bi-analysis-item">
+          <div class="bi-analysis-num">04 /</div>
+          <h4>Creditor Reporting</h4>
+          <p>
+            Vendor balances, outstanding invoices
+            and payment ageing.
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- ALTRIA GALLERY -->
+
+      <div class="bi-gallery-head">
+        <h4>Dashboard Gallery</h4>
+        <span>Click a screenshot to view it full-size</span>
+      </div>
+
+      <div class="bi-gallery">
+
+        <figure class="bi-shot">
+          <a href="Images/altria-sales.png"
+             target="_blank"
+             rel="noopener noreferrer">
+            <img
+              src="Images/altria-sales.png"
+              alt="Altria sales performance dashboard"
+              loading="lazy">
+          </a>
+          <figcaption>
+            01 — Sales Performance (YTD)
+          </figcaption>
+        </figure>
+
+        <figure class="bi-shot">
+          <a href="Images/altria-profit.png"
+             target="_blank"
+             rel="noopener noreferrer">
+            <img
+              src="Images/altria-profit.png"
+              alt="Altria gross profit dashboard"
+              loading="lazy">
+          </a>
+          <figcaption>
+            02 — Gross Profit Dashboard (YTD)
+          </figcaption>
+        </figure>
+
+        <figure class="bi-shot">
+          <a href="Images/altria-project.png"
+             target="_blank"
+             rel="noopener noreferrer">
+            <img
+              src="Images/altria-project.png"
+              alt="Altria project financial analysis"
+              loading="lazy">
+          </a>
+          <figcaption>
+            03 — Project Financial Analysis
+          </figcaption>
+        </figure>
+
+        <figure class="bi-shot">
+          <a href="Images/altria-creditors.png"
+             target="_blank"
+             rel="noopener noreferrer">
+            <img
+              src="Images/altria-creditors.png"
+              alt="Altria creditor analysis"
+              loading="lazy">
+          </a>
+          <figcaption>
+            04 — Creditor Analysis
+          </figcaption>
+        </figure>
+
+      </div>
+
+
+      <!-- BUSINESS VALUE -->
+
+      <div class="bi-value">
+        <div class="bi-mini-heading">Business Value</div>
+        <p>
+          Consolidated financial reporting to support
+          performance comparisons, profitability
+          assessment and creditor monitoring.
+        </p>
+      </div>
+
+      <a
+        class="bi-full-link"
+        href="https://drive.google.com/file/d/1VJZOyUhZxt6znbQ2hPPBBIRvwdb2I1Tg/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer">
+        VIEW FULL ALTRIA DASHBOARD ↗
+      </a>
+
+    </div>
+  </div>
+
+
+  <!-- ======================================
+       TOOLS & CAPABILITIES
+  ====================================== -->
+
+  <div class="bi-tools">
+    <div class="bi-wrap">
+
+      <div class="bi-label">
+        ANALYTICAL TOOLKIT
+      </div>
+
+      <h3>Tools &amp; Capabilities</h3>
+
+      <div class="bi-tools-list">
+        <span>Power BI</span>
+        <span>Business Intelligence</span>
+        <span>Financial Analysis</span>
+        <span>KPI Reporting</span>
+        <span>Data Visualisation</span>
+        <span>Revenue Analysis</span>
+        <span>Profitability Analysis</span>
+        <span>Project Performance</span>
+        <span>Working Capital Analysis</span>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ==========================================
+ SECTION 03 — MACHINE LEARNING
+ & PREDICTIVE ANALYTICS
+========================================== -->
+
+<style>
+#machine-learning {
+  --ml-navy: #102a40;
+  --ml-dark: #07192c;
+  --ml-teal: #087f91;
+  --ml-purple: #7465a8;
+  --ml-aqua: #9bd9d7;
+  --ml-text: #50677b;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  color: var(--ml-navy);
+  background: #f7f8fc;
+}
+
+#machine-learning,
+#machine-learning * {
+  box-sizing: border-box;
+}
+
+#machine-learning .ml-wrap {
+  width: min(1320px, calc(100% - 56px));
+  margin: 0 auto;
+}
+
+#machine-learning .ml-label {
+  color: var(--ml-purple);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#machine-learning h2,
+#machine-learning h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -.6px;
+}
+
+/* ==========================================
+   FULL-WIDTH DARK NAVY HERO
+========================================== */
+
+#machine-learning .ml-hero {
+  background:
+    radial-gradient(
+      ellipse at 90% 5%,
+      rgba(112,103,166,.28),
+      transparent 50%
+    ),
+    linear-gradient(
+      115deg,
+      #07192c 0%,
+      #102a40 55%,
+      #253f59 100%
+    );
+
+  color: white;
+  padding: 65px 0 67px;
+}
+
+#machine-learning .ml-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 65px;
+  align-items: center;
+}
+
+#machine-learning .ml-hero .ml-label {
+  color: #91d9e0;
+}
+
+#machine-learning .ml-hero h2 {
+  color: white;
+  font-size: clamp(38px, 4vw, 55px);
+  line-height: 1.13;
+  margin: 22px 0 18px;
+}
+
+#machine-learning .ml-hero h2 span {
+  color: var(--ml-aqua);
+}
+
+#machine-learning .ml-hero-description {
+  color: #d8e9ed;
+  font-size: 13px;
+  line-height: 1.9;
+  max-width: 680px;
+  margin: 0;
+}
+
+#machine-learning .ml-hero-side {
+  border-left: 2px solid var(--ml-aqua);
+  padding-left: 28px;
+}
+
+#machine-learning .ml-hero-side p {
+  color: #d8e9ed;
+  font-size: 13px;
+  line-height: 1.85;
+  margin: 13px 0 18px;
+}
+
+#machine-learning .ml-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#machine-learning .ml-hero-tags span {
+  padding: 8px 12px;
+  border: 1px solid rgba(155,217,215,.28);
+  background: rgba(255,255,255,.06);
+  border-radius: 25px;
+  color: #e5f5f5;
+  font-size: 10px;
+}
+
+/* ==========================================
+   FEATURED PROJECT
+========================================== */
+
+#machine-learning .ml-main {
+  padding: 28px 0 36px;
+}
+
+#machine-learning .ml-project {
+  background: white;
+  border: 1px solid #dfe3ed;
+  border-radius: 13px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(16,42,64,.04);
+}
+
+#machine-learning .ml-project-head {
+  background: linear-gradient(
+    110deg,
+    #edf1fa,
+    #f4f1fa,
+    #edf7f6
+  );
+
+  padding: 22px 30px;
+  border-bottom: 1px solid #dfe5ed;
+}
+
+#machine-learning .ml-project-head h3 {
+  color: var(--ml-navy);
+  font-size: clamp(25px, 2.8vw, 34px);
+  line-height: 1.2;
+  margin: 9px 0;
+}
+
+#machine-learning .ml-project-head p {
+  color: var(--ml-text);
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 1100px;
+}
+
+#machine-learning .ml-content {
+  padding: 24px 30px 28px;
+}
+
+/* ==========================================
+   KEY PROJECT RESULTS
+========================================== */
+
+#machine-learning .ml-results {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 11px;
+  margin-bottom: 23px;
+}
+
+#machine-learning .ml-result {
+  background: #e9f5f4;
+  border-radius: 9px;
+  border-top: 3px solid var(--ml-teal);
+  padding: 17px 20px;
+}
+
+#machine-learning .ml-result:nth-child(2) {
+  background: #f0edfa;
+  border-top-color: var(--ml-purple);
+}
+
+#machine-learning .ml-result:nth-child(3) {
+  background: #fcf0e9;
+  border-top-color: #d68c79;
+}
+
+#machine-learning .ml-result strong {
+  display: block;
+  color: var(--ml-navy);
+  font-size: clamp(27px, 3vw, 37px);
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+#machine-learning .ml-result span {
+  display: block;
+  color: var(--ml-text);
+  font-size: 11px;
+  line-height: 1.5;
+  margin-top: 5px;
+}
+
+/* ==========================================
+   METHODOLOGY
+========================================== */
+
+#machine-learning .ml-subtitle {
+  color: var(--ml-navy);
+  font-size: 22px;
+  margin: 0 0 13px;
+}
+
+#machine-learning .ml-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 11px;
+}
+
+#machine-learning .ml-step {
+  background: #edf4f7;
+  border: 1px solid #dce8ed;
+  border-radius: 9px;
+  padding: 17px;
+}
+
+#machine-learning .ml-step:nth-child(2) {
+  background: #f0edfa;
+  border-color: #e5def2;
+}
+
+#machine-learning .ml-step:nth-child(3) {
+  background: #e9f5f1;
+  border-color: #d7e9e2;
+}
+
+#machine-learning .ml-step:nth-child(4) {
+  background: #fcf2e9;
+  border-color: #f0e2d6;
+}
+
+#machine-learning .ml-step-num {
+  color: var(--ml-purple);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+#machine-learning .ml-step h4 {
+  font-family: "DM Sans", Arial, sans-serif;
+  color: var(--ml-navy);
+  font-size: 12px;
+  line-height: 1.4;
+  margin: 9px 0 6px;
+}
+
+#machine-learning .ml-step p {
+  color: var(--ml-text);
+  font-size: 11px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ==========================================
+   MACHINE LEARNING MODELS
+========================================== */
+
+#machine-learning .ml-models-section {
+  margin-top: 19px;
+}
+
+#machine-learning .ml-models {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+#machine-learning .ml-models span {
+  background: #eeeaf8;
+  border: 1px solid #ded6ee;
+  color: #5e548b;
+  border-radius: 20px;
+  padding: 8px 12px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+#machine-learning .ml-models span:last-child {
+  background: #dff2ed;
+  border-color: #b7ded6;
+  color: var(--ml-teal);
+}
+
+/* ==========================================
+   PROJECT SIGNIFICANCE
+========================================== */
+
+#machine-learning .ml-significance {
+  margin-top: 19px;
+  padding: 17px 20px;
+  border-left: 3px solid var(--ml-purple);
+  border-radius: 0 8px 8px 0;
+  background: linear-gradient(
+    100deg,
+    #f0edfa,
+    #edf7f6
+  );
+}
+
+#machine-learning .ml-significance .ml-label {
+  margin-bottom: 7px;
+}
+
+#machine-learning .ml-significance p {
+  color: #465c72;
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==========================================
+   SKILLS & PROJECT LINK
+========================================== */
+
+#machine-learning .ml-bottom {
+  margin-top: 19px;
+}
+
+#machine-learning .ml-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 10px 0 16px;
+}
+
+#machine-learning .ml-skills span {
+  background: #eef0fa;
+  border: 1px solid #dfe2f2;
+  color: #5e548b;
+  border-radius: 20px;
+  padding: 7px 11px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+#machine-learning .ml-skills span:nth-child(3n) {
+  background: #e8f4f1;
+  border-color: #d3e7e1;
+  color: #347d73;
+}
+
+#machine-learning .ml-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 20px;
+  background: var(--ml-navy);
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .5px;
+  transition: background .2s ease, transform .2s ease;
+}
+
+#machine-learning .ml-link:hover {
+  background: var(--ml-purple);
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 1000px) {
+  #machine-learning .ml-steps {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width: 750px) {
+  #machine-learning .ml-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  #machine-learning .ml-hero {
+    padding: 45px 0;
+  }
+}
+
+@media (max-width: 650px) {
+  #machine-learning .ml-wrap {
+    width: calc(100% - 30px);
+  }
+
+  #machine-learning .ml-main {
+    padding: 20px 0 28px;
+  }
+
+  #machine-learning .ml-project-head,
+  #machine-learning .ml-content {
+    padding: 20px;
+  }
+
+  #machine-learning .ml-results,
+  #machine-learning .ml-steps {
+    grid-template-columns: 1fr;
+  }
+
+  #machine-learning .ml-hero-side {
+    padding-left: 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #machine-learning .ml-link {
+    transition: none;
+  }
+
+  #machine-learning .ml-link:hover {
+    transform: none;
+  }
+}
+</style>
+
+
+<section id="machine-learning">
+
+  <!-- ======================================
+       FULL-WIDTH NAVY HERO
+  ====================================== -->
+
+  <div class="ml-hero">
+    <div class="ml-wrap">
+
+      <div class="ml-hero-grid">
+
+        <!-- LEFT SIDE -->
+
+        <div>
+          <div class="ml-label">
+            03 / MACHINE LEARNING &amp; PREDICTIVE ANALYTICS
+          </div>
+
+          <h2>
+            From Complex Data to<br>
+            <span>Predictive Intelligence.</span>
+          </h2>
+
+          <p class="ml-hero-description">
+            Exploring how machine learning and
+            statistical modelling uncover patterns,
+            assess risks and generate meaningful
+            predictions from complex datasets.
+          </p>
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="ml-hero-side">
+
+          <div class="ml-label">
+            MY ANALYTICAL APPROACH
+          </div>
+
+          <p>
+            Combining data preprocessing, predictive
+            modelling and quantitative evaluation
+            to compare algorithms and communicate
+            evidence-based findings.
+          </p>
+
+          <div class="ml-hero-tags">
+            <span>Python</span>
+            <span>Classification</span>
+            <span>Predictive Modelling</span>
+            <span>Model Evaluation</span>
+            <span>Statistical Analysis</span>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ======================================
+       FEATURED MACHINE LEARNING PROJECT
+  ====================================== -->
+
+  <div class="ml-main">
+    <div class="ml-wrap">
+
+      <article class="ml-project">
+
+        <!-- PROJECT HEADER -->
+
+        <div class="ml-project-head">
+
+          <div class="ml-label">
+            FEATURED PROJECT / PREDICTIVE HEALTHCARE ANALYTICS
+          </div>
+
+          <h3>
+            Predicting ICU Patient Mortality
+            Using Machine Learning
+          </h3>
+
+          <p>
+            Developed and evaluated machine learning
+            models using the MIMIC-III critical care
+            dataset to predict in-hospital mortality.
+            Prepared clinical data, compared
+            classification algorithms and assessed
+            predictive performance for healthcare
+            risk analysis.
+          </p>
+
+        </div>
+
+
+        <div class="ml-content">
+
+          <!-- KEY RESULTS -->
+
+          <div class="ml-results">
+
+            <div class="ml-result">
+              <strong>15,664</strong>
+              <span>ICU patient records analysed</span>
+            </div>
+
+            <div class="ml-result">
+              <strong>10</strong>
+              <span>Model configurations evaluated</span>
+            </div>
+
+            <div class="ml-result">
+              <strong>0.9575</strong>
+              <span>Best reported out-of-sample ROC-AUC</span>
+            </div>
+
+          </div>
+
+
+          <!-- METHODOLOGY -->
+
+          <h3 class="ml-subtitle">
+            Methodology &amp; Technical Approach
+          </h3>
+
+          <div class="ml-steps">
+
+            <div class="ml-step">
+              <div class="ml-step-num">01 /</div>
+              <h4>Data Preparation</h4>
+              <p>
+                Cleaned clinical data, handled
+                missing values and prepared
+                features for modelling.
+              </p>
+            </div>
+
+            <div class="ml-step">
+              <div class="ml-step-num">02 /</div>
+              <h4>Model Development</h4>
+              <p>
+                Explored Logistic Regression,
+                KNN, Decision Trees,
+                Neural Networks and XGBoost.
+              </p>
+            </div>
+
+            <div class="ml-step">
+              <div class="ml-step-num">03 /</div>
+              <h4>Model Evaluation</h4>
+              <p>
+                Compared classification
+                performance using ROC-AUC
+                to assess predictive discrimination.
+              </p>
+            </div>
+
+            <div class="ml-step">
+              <div class="ml-step-num">04 /</div>
+              <h4>Results &amp; Interpretation</h4>
+              <p>
+                XGBoost achieved the highest
+                reported out-of-sample
+                ROC-AUC of 0.9575.
+              </p>
+            </div>
+
+          </div>
+
+
+          <!-- ALL MODELS -->
+
+          <div class="ml-models-section">
+
+            <div class="ml-label">
+              MACHINE LEARNING MODELS EXPLORED
+            </div>
+
+            <div class="ml-models">
+              <span>Logistic Regression</span>
+              <span>K-Nearest Neighbours (KNN)</span>
+              <span>Random Forest</span>
+              <span>Decision Trees</span>
+              <span>Neural Networks</span>
+              <span>XGBoost</span>
+            </div>
+
+          </div>
+
+
+          <!-- PROJECT SIGNIFICANCE -->
+
+          <div class="ml-significance">
+
+            <div class="ml-label">
+              PROJECT SIGNIFICANCE
+            </div>
+
+            <p>
+              Demonstrated practical skills in
+              predictive modelling, clinical data
+              preprocessing, classification and
+              quantitative evaluation, translating
+              complex results into evidence-based findings.
+            </p>
+
+          </div>
+
+
+          <!-- SKILLS & LINK -->
+
+          <div class="ml-bottom">
+
+            <div class="ml-label">
+              TECHNICAL SKILLS DEMONSTRATED
+            </div>
+
+            <div class="ml-skills">
+              <span>Python</span>
+              <span>Machine Learning</span>
+              <span>Predictive Modelling</span>
+              <span>Classification</span>
+              <span>Data Preprocessing</span>
+              <span>Model Evaluation</span>
+              <span>ROC-AUC</span>
+              <span>Statistical Analysis</span>
+            </div>
+
+            <a
+              class="ml-link"
+              href="https://drive.google.com/file/d/1RHAJ7L0_zUIns284usPkhg2ZsUfPJ0d0/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer">
+              VIEW FULL MACHINE LEARNING PROJECT ↗
+            </a>
+
+          </div>
+
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ==========================================
+ SECTION 04 — STRATEGIC CONSULTING
+ & BUSINESS ADVISORY
+========================================== -->
+
+<style>
+#strategic-consulting {
+  --sc-navy: #102a40;
+  --sc-dark: #07192c;
+  --sc-teal: #087f91;
+  --sc-aqua: #9bd9d7;
+  --sc-text: #50677b;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  color: var(--sc-navy);
+  background: #f7faf9;
+}
+
+#strategic-consulting,
+#strategic-consulting * {
+  box-sizing: border-box;
+}
+
+#strategic-consulting .sc-wrap {
+  width: min(1320px, calc(100% - 56px));
+  margin: auto;
+}
+
+#strategic-consulting .sc-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--sc-teal);
+}
+
+#strategic-consulting h2,
+#strategic-consulting h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -.6px;
+}
+
+/* ==========================================
+   FULL-WIDTH DARK BLUE INTRODUCTION
+========================================== */
+
+#strategic-consulting .sc-hero {
+  background:
+    radial-gradient(
+      ellipse at 90% 5%,
+      rgba(72,151,151,.38),
+      transparent 50%
+    ),
+    linear-gradient(
+      115deg,
+      #07192c 0%,
+      #102a40 55%,
+      #173e4b 100%
+    );
+
+  color: white;
+  padding: 65px 0 67px;
+}
+
+#strategic-consulting .sc-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 65px;
+  align-items: center;
+}
+
+#strategic-consulting .sc-hero .sc-label {
+  color: #81d6db;
+}
+
+#strategic-consulting .sc-hero h2 {
+  color: white;
+  font-size: clamp(38px, 4vw, 55px);
+  line-height: 1.13;
+  margin: 22px 0 18px;
+}
+
+#strategic-consulting .sc-hero h2 span {
+  color: var(--sc-aqua);
+}
+
+#strategic-consulting .sc-hero-description {
+  color: #d8e9ed;
+  font-size: 13px;
+  line-height: 1.9;
+  max-width: 680px;
+  margin: 0;
+}
+
+#strategic-consulting .sc-hero-side {
+  border-left: 2px solid var(--sc-aqua);
+  padding-left: 28px;
+}
+
+#strategic-consulting .sc-hero-side p {
+  color: #d8e9ed;
+  font-size: 13px;
+  line-height: 1.85;
+  margin: 13px 0 18px;
+}
+
+#strategic-consulting .sc-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#strategic-consulting .sc-hero-tags span {
+  padding: 8px 12px;
+  border: 1px solid rgba(155,217,215,.28);
+  background: rgba(255,255,255,.06);
+  border-radius: 25px;
+  color: #e5f5f5;
+  font-size: 10px;
+}
+
+/* ==========================================
+   FEATURED PROJECT
+========================================== */
+
+#strategic-consulting .sc-main {
+  padding: 32px 0 40px;
+}
+
+#strategic-consulting .sc-project {
+  background: white;
+  border: 1px solid #dce7e6;
+  border-radius: 13px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(16,42,64,.04);
+}
+
+#strategic-consulting .sc-project-head {
+  padding: 23px 30px;
+  background: linear-gradient(
+    110deg,
+    #e8f4f1,
+    #f2f7f6,
+    #f8f4ec
+  );
+  border-bottom: 1px solid #dce8e5;
+}
+
+#strategic-consulting .sc-project-head h3 {
+  font-size: clamp(25px, 2.8vw, 34px);
+  line-height: 1.2;
+  margin: 9px 0 7px;
+}
+
+#strategic-consulting .sc-client {
+  color: #087f91;
+  font-size: 11px;
+  font-weight: 800;
+  margin-bottom: 9px;
+}
+
+#strategic-consulting .sc-project-head p {
+  color: var(--sc-text);
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 1100px;
+}
+
+#strategic-consulting .sc-content {
+  padding: 24px 30px 28px;
+}
+
+#strategic-consulting .sc-subtitle {
+  font-size: 22px;
+  margin: 0 0 13px;
+  color: var(--sc-navy);
+}
+
+/* ==========================================
+   FOUR ANALYSIS CARDS
+========================================== */
+
+#strategic-consulting .sc-analysis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 11px;
+}
+
+#strategic-consulting .sc-analysis-item {
+  padding: 17px;
+  background: #eaf5f2;
+  border: 1px solid #d6e9e3;
+  border-radius: 9px;
+}
+
+#strategic-consulting .sc-analysis-item:nth-child(2) {
+  background: #edf3fa;
+  border-color: #dce5f0;
+}
+
+#strategic-consulting .sc-analysis-item:nth-child(3) {
+  background: #f6effa;
+  border-color: #e9dff0;
+}
+
+#strategic-consulting .sc-analysis-item:nth-child(4) {
+  background: #fcf2e8;
+  border-color: #f0e2d2;
+}
+
+#strategic-consulting .sc-num {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--sc-teal);
+}
+
+#strategic-consulting .sc-analysis-item h4 {
+  font-size: 12px;
+  color: var(--sc-navy);
+  line-height: 1.4;
+  margin: 9px 0 6px;
+}
+
+#strategic-consulting .sc-analysis-item p {
+  font-size: 11px;
+  color: var(--sc-text);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ==========================================
+   THREE-YEAR ROADMAP
+========================================== */
+
+#strategic-consulting .sc-roadmap-section {
+  margin-top: 23px;
+}
+
+#strategic-consulting .sc-roadmap {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 11px;
+}
+
+#strategic-consulting .sc-year {
+  padding: 18px 20px;
+  border-radius: 9px;
+  background: #e7f3ef;
+  border-top: 3px solid #579b87;
+}
+
+#strategic-consulting .sc-year:nth-child(2) {
+  background: #edf1f9;
+  border-top-color: #8397bf;
+}
+
+#strategic-consulting .sc-year:nth-child(3) {
+  background: #faf1e4;
+  border-top-color: #c7a36a;
+}
+
+#strategic-consulting .sc-year-label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--sc-teal);
+}
+
+#strategic-consulting .sc-year h4 {
+  font-size: 18px;
+  margin: 6px 0;
+  color: var(--sc-navy);
+}
+
+#strategic-consulting .sc-year p {
+  font-size: 11px;
+  line-height: 1.55;
+  color: var(--sc-text);
+  margin: 0;
+}
+
+/* ==========================================
+   STRATEGIC OUTCOME
+========================================== */
+
+#strategic-consulting .sc-outcome {
+  margin-top: 19px;
+  padding: 17px 20px;
+  border-left: 3px solid #6b9f8e;
+  border-radius: 0 8px 8px 0;
+  background: linear-gradient(
+    100deg,
+    #e8f4ef,
+    #f4f6ed
+  );
+}
+
+#strategic-consulting .sc-outcome .sc-label {
+  margin-bottom: 7px;
+}
+
+#strategic-consulting .sc-outcome p {
+  color: #38576a;
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==========================================
+   SKILLS & PROJECT LINK
+========================================== */
+
+#strategic-consulting .sc-bottom {
+  margin-top: 19px;
+}
+
+#strategic-consulting .sc-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 10px 0 16px;
+}
+
+#strategic-consulting .sc-skills span {
+  background: #edf4f0;
+  border: 1px solid #d8e6dd;
+  color: #3e6b5c;
+  border-radius: 20px;
+  padding: 7px 11px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+#strategic-consulting .sc-skills span:nth-child(3n) {
+  background: #f7eee5;
+  color: #947249;
+  border-color: #eadcc8;
+}
+
+#strategic-consulting .sc-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 25px;
+  background: var(--sc-navy);
+  color: white;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .5px;
+  transition: background .2s ease, transform .2s ease;
+}
+
+#strategic-consulting .sc-link:hover {
+  background: var(--sc-teal);
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 1000px) {
+  #strategic-consulting .sc-analysis {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width: 750px) {
+  #strategic-consulting .sc-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  #strategic-consulting .sc-hero {
+    padding: 45px 0;
+  }
+
+  #strategic-consulting .sc-roadmap {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  #strategic-consulting .sc-wrap {
+    width: calc(100% - 30px);
+  }
+
+  #strategic-consulting .sc-main {
+    padding: 20px 0 28px;
+  }
+
+  #strategic-consulting .sc-project-head,
+  #strategic-consulting .sc-content {
+    padding: 20px;
+  }
+
+  #strategic-consulting .sc-analysis {
+    grid-template-columns: 1fr;
+  }
+
+  #strategic-consulting .sc-hero-side {
+    padding-left: 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #strategic-consulting .sc-link {
+    transition: none;
+  }
+
+  #strategic-consulting .sc-link:hover {
+    transform: none;
+  }
+}
+</style>
+
+
+<section id="strategic-consulting">
+
+  <!-- ======================================
+       FULL-WIDTH NAVY HERO
+  ====================================== -->
+
+  <div class="sc-hero">
+    <div class="sc-wrap">
+
+      <div class="sc-hero-grid">
+
+        <!-- LEFT SIDE -->
+
+        <div>
+          <div class="sc-label">
+            04 / STRATEGIC CONSULTING &amp; BUSINESS ADVISORY
+          </div>
+
+          <h2>
+            From Business Challenges<br>
+            to <span>Strategic Solutions.</span>
+          </h2>
+
+          <p class="sc-hero-description">
+            Applying analytical research, commercial
+            understanding and strategic thinking to address
+            organisational challenges and develop practical,
+            evidence-based recommendations.
+          </p>
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="sc-hero-side">
+
+          <div class="sc-label">
+            MY CONSULTING APPROACH
+          </div>
+
+          <p>
+            Combining business research, risk assessment
+            and strategic frameworks to identify
+            vulnerabilities, evaluate opportunities
+            and recommend practical improvements.
+          </p>
+
+          <div class="sc-hero-tags">
+            <span>Strategic Research</span>
+            <span>Risk Assessment</span>
+            <span>ESG</span>
+            <span>Procurement</span>
+            <span>Business Advisory</span>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ======================================
+       FEATURED SOFITEL PROJECT
+  ====================================== -->
+
+  <div class="sc-main">
+    <div class="sc-wrap">
+
+      <article class="sc-project">
+
+        <!-- PROJECT HEADER -->
+
+        <div class="sc-project-head">
+
+          <div class="sc-label">
+            FEATURED PROJECT 01 / SOFITEL MELBOURNE ON COLLINS
+          </div>
+
+          <h3>
+            Strengthening Supplier Governance,
+            Sustainability &amp; Ethical Procurement
+          </h3>
+
+          <div class="sc-client">
+            Industry Consulting Project |
+            Monash University × Sofitel Melbourne on Collins
+          </div>
+
+          <p>
+            Collaborated on a university consulting
+            engagement examining procurement practices,
+            supplier governance, ESG considerations and
+            modern slavery risks. Applied strategic
+            research and procurement analysis to develop
+            recommendations for stronger supplier oversight.
+          </p>
+
+        </div>
+
+
+        <div class="sc-content">
+
+          <!-- ANALYSIS -->
+
+          <h3 class="sc-subtitle">
+            Key Areas of Analysis
+          </h3>
+
+          <div class="sc-analysis">
+
+            <div class="sc-analysis-item">
+              <div class="sc-num">01 /</div>
+              <h4>Procurement &amp; Supplier Risk</h4>
+              <p>
+                Assessed supplier expenditure, labour
+                intensity and operational criticality
+                to identify risk exposure.
+              </p>
+            </div>
+
+            <div class="sc-analysis-item">
+              <div class="sc-num">02 /</div>
+              <h4>ESG &amp; Modern Slavery</h4>
+              <p>
+                Examined ethical sourcing, supplier
+                compliance and sustainability through
+                relevant UN SDGs.
+              </p>
+            </div>
+
+            <div class="sc-analysis-item">
+              <div class="sc-num">03 /</div>
+              <h4>Strategic Business Analysis</h4>
+              <p>
+                Applied SWOT, PESTEL and supplier
+                prioritisation frameworks to evaluate
+                organisational challenges.
+              </p>
+            </div>
+
+            <div class="sc-analysis-item">
+              <div class="sc-num">04 /</div>
+              <h4>Strategic Recommendations</h4>
+              <p>
+                Contributed to a proposed three-year
+                Supplier Excellence Program focused
+                on governance and accountability.
+              </p>
+            </div>
+
+          </div>
+
+
+          <!-- ROADMAP -->
+
+          <div class="sc-roadmap-section">
+
+            <h3 class="sc-subtitle">
+              Three-Year Supplier Excellence Roadmap
+            </h3>
+
+            <div class="sc-roadmap">
+
+              <div class="sc-year">
+                <div class="sc-year-label">YEAR 01</div>
+                <h4>ESTABLISH</h4>
+                <p>
+                  Strengthen documentation, supplier
+                  onboarding and governance ownership.
+                </p>
+              </div>
+
+              <div class="sc-year">
+                <div class="sc-year-label">YEAR 02</div>
+                <h4>EMBED</h4>
+                <p>
+                  Introduce supplier assessments,
+                  training and risk-based monitoring.
+                </p>
+              </div>
+
+              <div class="sc-year">
+                <div class="sc-year-label">YEAR 03</div>
+                <h4>ASSURE</h4>
+                <p>
+                  Develop compliance reviews,
+                  performance monitoring and
+                  continuous improvement.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- STRATEGIC OUTCOME -->
+
+          <div class="sc-outcome">
+
+            <div class="sc-label">
+              STRATEGIC OUTCOME
+            </div>
+
+            <p>
+              Developed a proposed supplier governance
+              framework and phased implementation roadmap
+              to support transparent, accountable and
+              sustainable procurement practices.
+              Strengthened my capabilities in strategic
+              research, risk assessment and stakeholder
+              communication.
+            </p>
+
+          </div>
+
+
+          <!-- SKILLS -->
+
+          <div class="sc-bottom">
+
+            <div class="sc-label">
+              SKILLS &amp; FRAMEWORKS APPLIED
+            </div>
+
+            <div class="sc-skills">
+              <span>Strategic Consulting</span>
+              <span>Procurement Analysis</span>
+              <span>Supplier Risk Assessment</span>
+              <span>ESG</span>
+              <span>Modern Slavery Research</span>
+              <span>SWOT</span>
+              <span>PESTEL</span>
+              <span>SDG Mapping</span>
+              <span>Business Research</span>
+              <span>Stakeholder Communication</span>
+            </div>
+
+            <a
+              class="sc-link"
+              href="https://drive.google.com/file/d/1deZQc9Aq8BIANN71Crslr43CQkLTxcxi/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer">
+              VIEW FULL SOFITEL CONSULTING PROJECT ↗
+            </a>
+
+          </div>
+
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ==========================================
+ SECTION 05 — RESEARCH & DATA VISUALISATION
+========================================== -->
+
+<style>
+#research-visualisation {
+  --rv-navy: #102a40;
+  --rv-teal: #087f91;
+  --rv-text: #50677b;
+
+  background: linear-gradient(145deg, #f1f7f9, #f8f5f0);
+  color: var(--rv-navy);
+  font-family: "DM Sans", Arial, sans-serif;
+  padding: 48px 0 55px;
+}
+
+#research-visualisation,
+#research-visualisation * {
+  box-sizing: border-box;
+}
+
+#research-visualisation .rv-wrap {
+  width: min(1320px, calc(100% - 56px));
+  margin: auto;
+}
+
+#research-visualisation .rv-label {
+  color: var(--rv-teal);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+#research-visualisation h2,
+#research-visualisation h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+}
+
+/* INTRODUCTION */
+
+#research-visualisation .rv-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+#research-visualisation .rv-intro h2 {
+  font-size: clamp(32px, 3.5vw, 46px);
+  line-height: 1.17;
+  margin: 10px 0;
+}
+
+#research-visualisation .rv-intro h2 span {
+  color: var(--rv-teal);
+}
+
+#research-visualisation .rv-intro p {
+  color: var(--rv-text);
+  font-size: 12px;
+  line-height: 1.75;
+  margin: 0;
+  padding-left: 20px;
+  border-left: 3px solid #9bd9d7;
+}
+
+/* PROJECT GRID */
+
+#research-visualisation .rv-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+#research-visualisation .rv-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 24px 25px;
+  border-radius: 12px;
+  border: 1px solid #dce7eb;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(16,42,64,.035);
+}
+
+#research-visualisation .rv-card:nth-child(1) {
+  background: #e8f5f3;
+  border-top: 4px solid #4a9c92;
+}
+
+#research-visualisation .rv-card:nth-child(2) {
+  background: #f0edfa;
+  border-top: 4px solid #8e7dbb;
+}
+
+#research-visualisation .rv-card:nth-child(3) {
+  background: #edf3fa;
+  border-top: 4px solid #6793b5;
+}
+
+#research-visualisation .rv-card:nth-child(4) {
+  background: #fcf2e7;
+  border-top: 4px solid #c79a60;
+}
+
+#research-visualisation .rv-card-label {
+  color: var(--rv-teal);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  margin-bottom: 9px;
+}
+
+#research-visualisation .rv-card h3 {
+  color: var(--rv-navy);
+  font-size: 23px;
+  line-height: 1.25;
+  margin: 0 0 10px;
+}
+
+#research-visualisation .rv-card p {
+  color: var(--rv-text);
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0 0 12px;
+}
+
+#research-visualisation .rv-card h4 {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--rv-navy);
+  text-transform: uppercase;
+  margin: 5px 0 8px;
+}
+
+#research-visualisation .rv-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px 14px;
+  margin-bottom: 14px;
+}
+
+#research-visualisation .rv-points span {
+  color: #476175;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+#research-visualisation .rv-points span::before {
+  content: "•";
+  color: var(--rv-teal);
+  font-weight: 900;
+  margin-right: 6px;
+}
+
+/* PROJECT SIGNIFICANCE */
+
+#research-visualisation .rv-impact {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid rgba(16,42,64,.13);
+}
+
+#research-visualisation .rv-impact strong {
+  display: block;
+  color: var(--rv-teal);
+  font-size: 10px;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+#research-visualisation .rv-impact p {
+  margin: 0;
+  font-size: 11px;
+}
+
+/* PROJECT LINK */
+
+#research-visualisation .rv-link {
+  display: inline-flex;
+  align-self: flex-start;
+  margin-top: 14px;
+  padding: 10px 16px;
+  border-radius: 25px;
+  background: var(--rv-navy);
+  color: #fff;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .3px;
+  transition: background .2s ease;
+}
+
+#research-visualisation .rv-link:hover {
+  background: var(--rv-teal);
+}
+
+/* CAPABILITIES */
+
+#research-visualisation .rv-tools {
+  margin-top: 24px;
+  padding: 21px 24px;
+  border-radius: 11px;
+  background: #102a40;
+}
+
+#research-visualisation .rv-tools .rv-label {
+  color: #9bd9d7;
+}
+
+#research-visualisation .rv-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+#research-visualisation .rv-tags span {
+  color: #e9f5f6;
+  background: rgba(255,255,255,.09);
+  border: 1px solid rgba(155,217,215,.28);
+  border-radius: 20px;
+  padding: 7px 11px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 750px) {
+  #research-visualisation .rv-intro {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  #research-visualisation .rv-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #research-visualisation .rv-wrap {
+    width: calc(100% - 30px);
+  }
+}
+
+@media (max-width: 450px) {
+  #research-visualisation .rv-points {
+    grid-template-columns: 1fr;
+  }
+
+  #research-visualisation .rv-card {
+    padding: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   SECTION 05 — COMPACT SPACING UPDATE
+   ========================================== */
+
+/* Reduce overall section height */
+#research-visualisation {
+  padding: 30px 0 35px;
+}
+
+/* Compact introduction */
+#research-visualisation .rv-intro {
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+#research-visualisation .rv-intro h2 {
+  font-size: clamp(30px, 3.2vw, 42px);
+  line-height: 1.12;
+  margin: 7px 0;
+}
+
+#research-visualisation .rv-intro p {
+  line-height: 1.55;
+}
+
+/* Reduce gaps between project cards */
+#research-visualisation .rv-grid {
+  gap: 10px;
+}
+
+/* Reduce card padding */
+#research-visualisation .rv-card {
+  padding: 17px 19px;
+}
+
+/* Compact card headings */
+#research-visualisation .rv-card-label {
+  margin-bottom: 5px;
+}
+
+#research-visualisation .rv-card h3 {
+  font-size: 21px;
+  line-height: 1.2;
+  margin: 0 0 6px;
+}
+
+/* Reduce paragraph spacing */
+#research-visualisation .rv-card p {
+  font-size: 11px;
+  line-height: 1.5;
+  margin-bottom: 7px;
+}
+
+/* Compact subheadings */
+#research-visualisation .rv-card h4 {
+  margin: 3px 0 5px;
+}
+
+/* Tighten analysis points */
+#research-visualisation .rv-points {
+  gap: 4px 10px;
+  margin-bottom: 8px;
+}
+
+#research-visualisation .rv-points span {
+  font-size: 10.5px;
+  line-height: 1.35;
+}
+
+/* Reduce significance section spacing */
+#research-visualisation .rv-impact {
+  padding-top: 8px;
+}
+
+#research-visualisation .rv-impact strong {
+  margin-bottom: 3px;
+}
+
+#research-visualisation .rv-impact p {
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* Compact dashboard button */
+#research-visualisation .rv-link {
+  margin-top: 9px;
+  padding: 9px 14px;
+}
+
+/* Compact technical skills section */
+#research-visualisation .rv-tools {
+  margin-top: 12px;
+  padding: 15px 19px;
+}
+
+#research-visualisation .rv-tags {
+  gap: 6px;
+  margin-top: 9px;
+}
+
+#research-visualisation .rv-tags span {
+  padding: 6px 10px;
+}
+
+/* Mobile spacing */
+@media (max-width: 750px) {
+  #research-visualisation {
+    padding: 26px 0 30px;
+  }
+
+  #research-visualisation .rv-intro {
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  #research-visualisation .rv-grid {
+    gap: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+<section id="research-visualisation">
+  <div class="rv-wrap">
+
+    <!-- INTRODUCTION -->
+
+    <div class="rv-intro">
+
+      <div>
+        <div class="rv-label">
+          05 / RESEARCH &amp; DATA VISUALISATION
+        </div>
+
+        <h2>
+          Exploring Data.<br>
+          Understanding Patterns.<br>
+          <span>Informing Decisions.</span>
+        </h2>
+      </div>
+
+      <p>
+        My academic work spans statistical research,
+        database development, economic analysis and
+        interactive data visualisation. These projects
+        demonstrate my ability to investigate complex
+        questions and translate quantitative findings
+        into meaningful insights.
+      </p>
+
+    </div>
+
+
+    <!-- FOUR PROJECT CARDS -->
+
+    <div class="rv-grid">
+
+      <!-- PROJECT 01: BUSHFIRES -->
+
+      <article class="rv-card">
+
+        <div class="rv-card-label">
+          FEATURED PROJECT 01 / DATA VISUALISATION
+        </div>
+
+        <h3>
+          Australian Bushfires:<br>
+          From Ignition to Recovery
+        </h3>
+
+        <p>
+          Developed an interactive scrolling visualisation
+          exploring bushfire patterns, climate conditions,
+          ignition sources, geographic risk and
+          environmental impacts across Australia.
+        </p>
+
+        <h4>Key Areas of Analysis</h4>
+
+        <div class="rv-points">
+          <span>Climate &amp; fire conditions</span>
+          <span>Natural &amp; human ignition</span>
+          <span>Geographic risk patterns</span>
+          <span>Emissions &amp; recovery</span>
+        </div>
+
+        <div class="rv-impact">
+          <strong>Project Significance</strong>
+          <p>
+            Transformed complex environmental data into
+            an accessible, interactive visual narrative.
+          </p>
+        </div>
+
+        <a
+          class="rv-link"
+          href="https://tricia-de-rose.github.io/3179/"
+          target="_blank"
+          rel="noopener noreferrer">
+          EXPLORE LIVE DASHBOARD ↗
+        </a>
+
+      </article>
+
+
+      <!-- PROJECT 02: STATISTICAL RESEARCH -->
+
+      <article class="rv-card">
+
+        <div class="rv-card-label">
+          FEATURED PROJECT 02 / STATISTICAL RESEARCH
+        </div>
+
+        <h3>
+          Social Media, Public Policy<br>
+          &amp; Behavioural Analysis
+        </h3>
+
+        <p>
+          Conducted quantitative research into public
+          attitudes towards proposed social media
+          restrictions for children under 16,
+          examining demographic and behavioural factors.
+        </p>
+
+        <h4>Research Methods</h4>
+
+        <div class="rv-points">
+          <span>Descriptive statistics</span>
+          <span>T-tests &amp; ANOVA</span>
+          <span>Chi-square tests</span>
+          <span>Correlation &amp; regression</span>
+        </div>
+
+        <div class="rv-impact">
+          <strong>Project Significance</strong>
+          <p>
+            Applied hypothesis testing and statistical
+            modelling to develop evidence-based findings.
+          </p>
+        </div>
+
+      </article>
+
+
+      <!-- PROJECT 03: SQL -->
+
+      <article class="rv-card">
+
+        <div class="rv-card-label">
+          FEATURED PROJECT 03 / DATABASE MANAGEMENT
+        </div>
+
+        <h3>
+          Database Management<br>
+          &amp; Oracle SQL
+        </h3>
+
+        <p>
+          Applied relational database principles and
+          Oracle SQL to organise, query and analyse
+          structured datasets.
+        </p>
+
+        <h4>Technical Approach</h4>
+
+        <div class="rv-points">
+          <span>Relational database design</span>
+          <span>Data normalisation</span>
+          <span>SQL joins &amp; aggregation</span>
+          <span>Data validation</span>
+        </div>
+
+        <div class="rv-impact">
+          <strong>Project Significance</strong>
+          <p>
+            Strengthened skills in structured data
+            management, efficient querying and
+            reliable analytical workflows.
+          </p>
+        </div>
+
+      </article>
+
+
+      <!-- PROJECT 04: ECONOMICS -->
+
+      <article class="rv-card">
+
+        <div class="rv-card-label">
+          FEATURED PROJECT 04 / ECONOMIC RESEARCH
+        </div>
+
+        <h3>
+          Markets, Competition<br>
+          &amp; Economic Decision-Making
+        </h3>
+
+        <p>
+          Applied economic theory and analytical
+          research to investigate market behaviour,
+          competition, pricing and business
+          decision-making.
+        </p>
+
+        <h4>Research Focus</h4>
+
+        <div class="rv-points">
+          <span>Market structures</span>
+          <span>Pricing &amp; efficiency</span>
+          <span>Consumer welfare</span>
+          <span>Economic policy evaluation</span>
+        </div>
+
+        <div class="rv-impact">
+          <strong>Project Significance</strong>
+          <p>
+            Connected economic theory with real-world
+            business challenges and market outcomes.
+          </p>
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <!-- RESEARCH CAPABILITIES -->
+
+    <div class="rv-tools">
+
+      <div class="rv-label">
+        RESEARCH &amp; TECHNICAL CAPABILITIES
+      </div>
+
+      <div class="rv-tags">
+        <span>Statistical Analysis</span>
+        <span>R</span>
+        <span>Python</span>
+        <span>SQL</span>
+        <span>Data Visualisation</span>
+        <span>Database Design</span>
+        <span>Hypothesis Testing</span>
+        <span>Regression Analysis</span>
+        <span>Economic Research</span>
+        <span>Data Storytelling</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
